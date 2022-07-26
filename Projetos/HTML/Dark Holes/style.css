@@ -1,18 +1,1 @@
-@charset "UTF-8";
-
-@font-face {
-	font-family: 'FontLogo';
-	src: url("fonte/");
-}
-
-div#interface h1 {
-	color: blue;
-	font-size: 50pt;
-}
-
-
-a:hover {
-	color: orange;
-	text-decoration: underline;
-}
 
