@@ -30,3 +30,34 @@
 Projetos de um programador novato no universo de programação será comitado aqui! 
 ```
 </div>
+
+<br>
+
+# Estado Dos Projetos
+> 🐍 PYTHON
+
+Projetos | Conclusão Do Projeto
+--- | ---
+Calculadora | ✔️
+Relógio | ✔️
+Login | ✔️
+
+<br>
+
+> 💻 HTML
+
+Projetos | Conclusão Do Projeto
+--- | ---
+Black Holes | ✔️
+Landing Page | ❌
+Sign Up Page | ❌
+
+<br>
+
+> 📒 JavaScript
+
+Projetos | Conclusão Do Projeto
+--- | ---
+Bateria | ❌
+Calculadora | ❌
+Lista de Tarefas | ❌
