@@ -1,6 +1,7 @@
 # Portfolio-Baku
 <div align="left">
-	> LINGUAGENS
+
+> LINGUAGENS
 <div>
 <img align="center" alt="Baku-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
 <img align="center" alt="Baku-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
