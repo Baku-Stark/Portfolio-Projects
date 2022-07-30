@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'FontIndex';
+    src: url("/_lpfontes/nasalization-rg.otf");
+}
+
+/*--- AJUSTANDO PÁGINA ---*/
+body{
+    background-color: #111111;
+    color: #FDFDFD;
+    font-family: 'FontIndex';
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* --- barra --- */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+/* --- Corpo da Landing --- */
+h1{
+    font-weight: 200;
+}
+
+h2{
+    font-size: 56px;
+    line-height: 10px;
+}
+
+span{
+    color: #008cff;
+}
+
+p{
+    line-height: 20px;
+    max-width: 500px;
+    font-family: Helvetica;
+}
+
+a{
+    color: aliceblue;
+}
+
+a:hover{
+    color: #008cff;
+    transition: 0.3s all;
+    text-shadow: 1px 1px 10px #008cff;
+}
+
+#sign-up{
+    color: #008cff;
+    border: 2px solid #008cff;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#sign-up:hover{
+    color: aliceblue;
+    background-color: #008cff;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+/* --- Formulário da Landing --- */
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+input{
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: none;
+}
+
+#button{
+    height: 50px;
+    width: 50%;
+    background-color: #008cff;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+#button:hover{
+    cursor: pointer;
+}
+
+/* --- Imagem --- */
+
+img {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+}
