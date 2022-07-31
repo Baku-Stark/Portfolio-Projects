@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+@font-face{
+	font-family: 'FontLogo';
+	src: url("../_portfontes/RACING HARD.ttf");
+}
+
+/* --- FONTE DA <li> --- */
+@font-face{
+	font-family: 'FontLI';
+	src: url("../_portfontes/commando.ttf");
+}
+
+/* --- AJUSTANDO PÁGINA --- */
+body{
+	background-color: #111111;
+	color: #FDFDFD;
+	font-family: 'FontLogo';
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+/* --- BARRA DO PORFÓLIO --- */
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#title{
+	flex-direction: column;
+	line-height: 10px;
+}
+
+li{
+	font-family: 'FontLI';
+	display: inline-block;
+	margin: 20px;
+}
+
+
+/* --- CORPO DO PORTFÓLIO --- */
+h1{
+	font-weight: 200;
+}
+
+h2{
+	font-size: 56px;
+	line-height: 10px;
+}
+
+span{
+	color: #00FFEA;
+}
+
+p{
+	line-height: 20px;
+	max-width: 500px;
+	margin-right: 110px;
+	font-family: Helvetica;
+}
+
+a {
+	color: #FDFDFD;
+}
+
+a:hover{
+	color: #00FFEA;
+	transition: 0.3s all;
+	text-shadow: 1px 1px 10px #0366fc;
+}
+
+main{
+	display: flex;
+	flex-direction: row;
+	margin-top: 50px;
+	padding-left: 160px;
+}
+
+/* --- INTRODUÇÃO --- */
+div#intro{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* --- IMAGEM RUNA ICON --- */
+article img{
+	animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+	0%, 100%{
+		transform: translateY(0);
+	} 50%{
+		transform: translateY(-50px);
+	}
+}
+
+/* --- FOOTER --- */
+footer{
+	border-top: 4px dashed #FDFDFD;
+}
+
+footer img{
+	padding: 5px;
+}
+
+footer a{
+	font-family: Impact, sans-serif;
+	color: #FDFDFD;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+}
+
+footer a:hover{
+	color: #00FFEA;
+	text-shadow: -1px -1px 5px #ffffff, 1px 1px 5px #aa02f2;
+}
