@@ -11,6 +11,26 @@
 	src: url("../_portfontes/commando.ttf");
 }
 
+/* --- SCROLLBAR ---*/
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #393739 #000000;
+}
+
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #393739;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
 /* --- AJUSTANDO PÁGINA --- */
 body{
 	background-color: #111111;
@@ -22,14 +42,17 @@ body{
 }
 
 /* --- BARRA DO PORFÓLIO --- */
-header{
+nav{
+    position: fixed;
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	background-color: #11111185;
+	backdrop-filter: blur(10px);
 }
 
-#title{
+.title{
 	flex-direction: column;
 	line-height: 10px;
 }
@@ -40,6 +63,62 @@ li{
 	margin: 20px;
 }
 
+a {
+	color: #FDFDFD;
+}
+
+a:hover{
+	color: #00FFEA;
+	transition: 0.3s all;
+	text-shadow: 1px 1px 10px #0366fc;
+}
+
+/* --- BOTÕES DE LINK --- */
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+input{
+    font-family: Helvetica;
+    font-weight: bold;
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    padding: 20px auto;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+form input:hover{
+    transition: 0.5s all;
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+
+#Linkedin:hover{
+    background-color: #0366fc;
+    color: #f0f0f0;
+}
+
+#Twitter:hover{
+    background-color: #03afff;
+    color: #f0f0f0;
+}
+
+#Instagram:hover{
+    background: linear-gradient(90deg, #e9337f 0%, #ffffff 0%, #db143c 45%);
+    animation: gradient 15s ease infinite;
+    color: #f0f0f0;
+}
+
+#GitHub:hover{
+    background-color: #000000;
+    color: #f0f0f0;
+}
 
 /* --- CORPO DO PORTFÓLIO --- */
 h1{
@@ -62,20 +141,11 @@ p{
 	font-family: Helvetica;
 }
 
-a {
-	color: #FDFDFD;
-}
-
-a:hover{
-	color: #00FFEA;
-	transition: 0.3s all;
-	text-shadow: 1px 1px 10px #0366fc;
-}
-
 main{
 	display: flex;
 	flex-direction: row;
-	margin-top: 50px;
+	margin-top: 150px;
+    margin-bottom: 50px;
 	padding-left: 160px;
 }
 
@@ -98,26 +168,4 @@ article img{
 	} 50%{
 		transform: translateY(-50px);
 	}
-}
-
-/* --- FOOTER --- */
-footer{
-	border-top: 4px dashed #FDFDFD;
-}
-
-footer img{
-	padding: 5px;
-}
-
-footer a{
-	font-family: Impact, sans-serif;
-	color: #FDFDFD;
-	text-align: center;
-	padding: 10px;
-	text-decoration: none;
-}
-
-footer a:hover{
-	color: #00FFEA;
-	text-shadow: -1px -1px 5px #ffffff, 1px 1px 5px #aa02f2;
 }
