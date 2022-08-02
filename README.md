@@ -52,7 +52,7 @@ Projetos | Conclusão Do Projeto
 --- | ---
 Black Holes | ✔️
 Landing Page | ✔️
-Sign Up Page | ❌
+Sign Up Page | ✔️
 
 <br>
 
