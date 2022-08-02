@@ -1,89 +1,21 @@
-/* === PYTHON ====*/
-.card-python {
-    --card-gradient: rgba(0, 0, 0, 0.8);
-    --card-gradient: #3734dd, #f0e10c;
-    --card-blend-mode: overlay;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
-    padding-bottom: 1rem;
-    background-image: linear-gradient(
-    var(--card-gradient),
-      white max(9.5rem, 27vh)
-    );
-    overflow: hidden;
+.card{
+	font-family: Arial, sans-serif;
+	background-color:#07b9ed;
+	color: black;
+	width: 400px;
+	height: 200px;
+	border-radius: 20px;
+	box-shadow: 3px 2px 10px #f1f1f1;
 }
 
-.card-python a{
-    font-family: Impact;
-    color: #111111;
+h3{
+	padding: 10px;
 }
 
-.card-python a:hover{
-    text-shadow: none;
-    color: #2b2b2b;
+p{
+	padding: 10px;
 }
 
-.card-python p{
-    color: black;
-}
-
-/* === HTML5 ====*/
-.card-html{
-    --card-gradient: rgba(0, 0, 0, 0.8);
-    --card-gradient: #ffffff, #f07a0c;
-    --card-blend-mode: overlay;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
-    padding-bottom: 1rem;
-    background-image: linear-gradient(
-    var(--card-gradient),
-      white max(9.5rem, 27vh)
-    );
-    overflow: hidden;
-}
-
-.card-html a{
-    font-family: Impact;
-    color: #111111;
-}
-
-.card-html a:hover{
-    text-shadow: none;
-    color: #2b2b2b;
-}
-
-.card-html p{
-    color: black;
-}
-
-/* === JAVASCRIPT ====*/
-.card-js {
-    --card-gradient: rgba(0, 0, 0, 0.8);
-    --card-gradient: #000000, #f8e801;
-    --card-blend-mode: overlay;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
-    padding-bottom: 1rem;
-    background-image: linear-gradient(
-    var(--card-gradient),
-      white max(9.5rem, 27vh)
-    );
-    overflow: hidden;
-}
-
-.card-js a{
-    font-family: Impact;
-    color: #111111;
-}
-
-.card-js a:hover{
-    text-shadow: none;
-    color: #2b2b2b;
-}
-
-.card-js p{
-    color: black;
+.btn{
+	padding: 10px 10px;
 }
