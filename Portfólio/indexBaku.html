@@ -6,28 +6,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Wallace | Portfólio Page</title>
 	<link rel="stylesheet" href="css/port.css">
-
-    <!-- CARDS!! -->
-    <link rel="stylesheet" href="/css/card.css">
-    <!-- VERSÃO PARA CELULAR-->
 	<link rel="stylesheet" href="css/smart.css">
-	<link rel="shortcut icon" href="/_portimagens/im-icon.png">
+	<link rel="stylesheet" href="css/card.css">
+	<link rel="shortcut icon" href="_portimagens/im-icon.png">
 </head>
 
 <body>
 	<!-- Navbar do Portfólio -->
-	<nav>
+	<header>
 		<div id="title">
 			<h1>Wallace (Baku-Stark)</h1>
 			<h1>Portfólio</h1>	
 		</div>
-		<ul>
-			<a href="#intro"><li>Intro</li></a>
-			<a href="#skill"><li>Habilidades</li></a>
-            <a href="#proje"><li>Projetos</li></a>
-			<a href="#saiba"><li>Saiba Mais</li></a>
-		</ul>
-	</nav>
+		<nav>
+			<ul>
+				<a href="#intro"><li>Intro</li></a>
+				<a href="#skill"><li>Habilidades</li></a>
+				<a href="#proje"><li>Projetos</li></a>
+				<a href="#saiba"><li>Saiba Mais</li></a>
+			</ul>
+		</nav>
+	</header>
 
 	<main>
 		<aside>
@@ -36,23 +35,22 @@
 				Me chamo Wallace, mas utilizo o nick "Baku-Stark".
 				<br> Seja bem-vindo ao meu projeto de portfólio!
 			</p>
+				<form>
+	                <a href="https://www.linkedin.com/in/wallace-freitas-92a2061b6/" target="_blank">
+	                    <input type="button" value="LINKEDIN" id="Linkedin">
+	                </a>
+	                
+	                <a href="https://twitter.com/Walleemc2" target="_blank">
+	                    <input type="button" value="TWITTER" id="Twitter">
+	                </a>
 
-            <form>
-                <a href="https://www.linkedin.com/in/wallace-freitas-92a2061b6/" target="_blank">
-                    <input type="button" value="LINKEDIN" id="Linkedin">
-                </a>
-                
-                <a href="https://twitter.com/Walleemc2" target="_blank">
-                    <input type="button" value="TWITTER" id="Twitter">
-                </a>
-
-                <a href="https://www.instagram.com/wallace_emc2/" target="_blank">
-                    <input type="button" value="INSTAGRAM" id="Instagram">
-                </a>
-                <a href="https://github.com/Baku-Stark" target="_blank">
-                    <input type="button" value="GITHUB" id="GitHub">
-                </a>
-            </form>
+	                <a href="https://www.instagram.com/wallace_emc2/" target="_blank">
+	                    <input type="button" value="INSTAGRAM" id="Instagram">
+	                </a>
+	                <a href="https://github.com/Baku-Stark" target="_blank">
+	                    <input type="button" value="GITHUB" id="GitHub">
+	                </a>
+	            </form>
 		</aside>
 
 		<article>
@@ -61,117 +59,49 @@
 		</article>
 	</main>
 
-	<section>
+	<div class="info" id="intro">
 		<!-- Informação sobre o usuário -->
-		<div id="intro">
-            <aside>
-                <h2><span>Infomação</span></h2>
-                <p>
-                    Novato no mundo da programação, meu interesse aconteceu no momento em que
-                    tive a vontade de criar um bot próprio para o meu servidor no Discord.
-                    <br> Começando em Abril, com o <a href="https://www.cursoemvideo.com/" target="_blank">Curso Em Vídeo (Gustavo Guanabara)</a>, minha primeira
-                    linguagem de programação foi Python — em diante segui outros cursos de HTML5 e CSS3, Git, GitHub e JavaScript.
-                </p>
-            </aside>
+		<div>
+			<h2><span>Infomação</span></h2>
+			<p>
+				Novato no mundo da programação, meu interesse aconteceu no momento em que
+                tive a vontade de criar um bot próprio para o meu servidor no Discord.
+                <br> Começando em Abril, com o 
+                <a href="https://www.cursoemvideo.com/" target="_blank">
+                Curso Em Vídeo (Gustavo Guanabara)</a>, minha primeira
+                linguagem de programação foi Python — em diante segui outros cursos como HTML5 e CSS3, Git, GitHub e JavaScript.
+			</p>
 		</div>
-	</section>
+	</div>
 
-    <section>
-        <!-- Habilidades sobre o usuário -->
-        <div id="skill">
-            <aside>
-                <h2><span>Habilidades</span></h2>
-                <p>
-                    ----
-                </p>
-            </aside>
-        </div>
-    </section>
+	<div class="skill" id="skill">
+		<!-- Informação sobre o usuário -->
+		<div>
+			<h2><span>Habilidades</span></h2>
+			<p>
+				----
+			</p>
+		</div>
+	</div>
 
-    <section>
-        <!-- Projetos -->
-        <div id="proje">
-            <aside>
-                <h2><span>Projetos</span></h2>
-            </aside>
-        </div>
-        <ul class="card-wrapper">
-            <li class="card-python">
-                <img 
-                src="/_portimagens/language-logo-python.png" 
-                alt="Python" width="30" height="30"
-                >
-                <h3><a href="https://github.com/Baku-Stark/Portfolio-Baku/blob/main/Projetos/Python/Calculadora.py" target="_blank">
-                    Calculadora
-                </a></h3>
-                <p>Python Calculadora</p>
-            </li>
-            <li class="card-python">
-                <img 
-                src="/_portimagens/language-logo-python.png" 
-                alt="Python" width="30" height="30"
-                >
-                <h3><a href="https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Rel%C3%B3gio" target="_blank">
-                    Clock
-                </a></h3>
-                <p>Python Relógio Digital</p>
-            </li>
-            <li class="card-python">
-                <img 
-                src="/_portimagens/language-logo-python.png" 
-                alt="Python" width="30" height="30"
-                >
-                <h3><a href="https://github.com/Baku-Stark/Portfolio-Baku/blob/main/Projetos/Python/login.py" target="_blank">
-                    Login
-                </a></h3>
-                <p>Python Painel De Login</p>
-            </li>
-
-            <!-- PROJETOS EM HTML5 -->
-            <br><li class="card-html">
-                <img 
-                src="/_portimagens/logo-html-5.png" 
-                alt="Html" width="30" height="30"
-                >
-                <h3><a href="https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/HTML/Black%20Holes" target="_blank">
-                   Blog - Black Hole
-                </a></h3>
-                <p>HTML5 Blog De Buracos Negros</p>
-            </li>
-            <li class="card-html">
-                <img 
-                src="/_portimagens/logo-html-5.png" 
-                alt="Html" width="30" height="30"
-                >
-                <h3><a href="https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/HTML/Landing%20Page" target="_blank">
-                   Sing Up
-                </a></h3>
-                <p>HTML5 Página De Registro</p>
-            </li>
-
-            <!-- PROJETOS EM JAVASCRIPT -->
-            <br><li class="card-js">
-                <img 
-                src="/_portimagens/logo-javascript.png" 
-                alt="JavaScript" width="30" height="30"
-                >
-                <h3><a href="">Calculadora</a></h3>
-                <p>JavaScript Calculadora</p>
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <!-- Mais Informações -->
-        <div id="saiba">
-            <aside>
-                <h2><span>Saiba Mais</span></h2>
-                <p>
-                    ----
-                </p>
-            </aside>
-        </div>
-    </section>
+	<div class="proje" id="proje">
+		<!-- Informação sobre o usuário -->
+		<div>
+			<h2><span>Projetos</span></h2>
+			<p>
+				Projetos realizados em Python, HTML5 e JavaScript.
+			</p>
+		</div>
+	</div>
+	<div class="card">
+  		<div class="card-body">
+    		<h3 class="card-title">Python</h3>
+    		<p class="card-text">
+      			<b>Calculadora</b> utilizando o import Tkinter.
+    		</p>
+    		<button type="button" class="btn">Link &rarr;</button>
+  		</div>
+	</div>
 
 </body>
 </html>
