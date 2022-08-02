@@ -1,0 +1,45 @@
+@media screen and (max-width: 760px){
+    header{
+        flex-direction: column;
+    }
+
+    main{
+        flex-direction: column;
+
+    }
+
+    ul{
+        text-align: center;
+    }
+
+    h2{
+        font-size: 38px;
+        padding-left: 100px;
+    }
+
+    form{
+        margin: 0px auto;
+        width: 100%;
+    }
+
+    input{
+        align-self: center;
+    }
+
+    #submit{
+        width: 120px;
+    }
+
+    img#gtr{
+        display: none;
+    }
+
+    .social-media{
+        padding-left: 160px;
+    }
+
+    .alternative{
+        padding-left: 250px;
+        margin-bottom: 5px;
+    }
+}

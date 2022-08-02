@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+/*--- FONTE DA PÁGINA ---*/
+@font-face {
+    font-family: 'FontIndex';
+    src: url("/_lpfontes/nasalization-rg.otf");
+}
+
+/*--- RESET DE PÁGINA ---*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: Arial;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+/*--- BARRA DE MENU ---*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body{
+    background-color: #111111;
+    color: #FDFDFD;
+    font-family: 'FontIndex';
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+h1{
+    font-weight: 200px;
+}
+
+h2{
+    color: #008cff;
+    font-size: 30px;
+    margin: 3rem;
+}
+
+a{
+    color: aliceblue;
+}
+
+a:hover{
+    color: #008cff;
+    transition: 0.3s all;
+    text-shadow: 1px 1px 10px #008cff;
+}
+
+#Login{
+    border: 2px solid #008cff;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+#Login:hover{
+    background-color: #008cff;
+    color: #f0f8ff;
+}
+
+
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+/*--- PÁGINA DE REGISTRO ---*/
+main{
+    display: flex;
+}
+
+.alternative{
+    color: #008cff;
+    padding-left: 95px;
+    margin-bottom: 8px;
+}
+
+main .social-media{
+    display: flex;
+    align-content: center;
+}
+
+main .social-media{
+    text-decoration: none;
+}
+
+main .social-media img{
+    width: 36px;
+    margin-left: 3rem;
+}
+
+main .social-media a:first-child img{
+    margin-left: 0;
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main label{
+    display: flex;
+    flex-direction: column;
+}
+
+main form label span{
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+input{
+    background-color: #272727;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    border-radius: 15px;
+    color: darkgrey;
+    font-size: 20px;
+    border: 1px solid #5c5c5c;
+}
+
+main form input[type="submit"]{
+    font-family: 'FontIndex';
+    cursor: pointer;
+    width: 50%;
+    margin-top: 4rem;
+    border: none;
+    border-radius: 30px;
+    color: #111111;
+    background-color: #008cff;
+}
+
+main form input[type="submit"]:hover{
+    font-family: 'FontIndex';
+    cursor: pointer;
+    width: 50%;
+    margin-top: 4rem;
+    border: none;
+    border-radius: 30px;
+    color: #111111;
+    background-color: #f0f8ff;
+    transition: 0.3s ease-in-out;
+}
+
+/*--- IMAGEM ---*/
+img#gtr{
+    height: 100%;
+    margin-left: 220px;
+    border-radius: 25px;
+}
