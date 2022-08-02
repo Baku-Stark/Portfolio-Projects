@@ -11,26 +11,6 @@
 	src: url("../_portfontes/commando.ttf");
 }
 
-/* --- SCROLLBAR ---*/
-* {
-    scrollbar-width: auto;
-    scrollbar-color: #393739 #000000;
-}
-
-*::-webkit-scrollbar {
-    width: 16px;
-}
-
-*::-webkit-scrollbar-track {
-    background: #000000;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #393739;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
-}
-
 /* --- AJUSTANDO PÁGINA --- */
 body{
 	background-color: #111111;
@@ -41,25 +21,11 @@ body{
 	padding: 15px;
 }
 
-/* --- BARRA DO PORFÓLIO --- */
-nav{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #11111185;
-	backdrop-filter: blur(10px);
-}
-
-.title{
-	flex-direction: column;
-	line-height: 10px;
-}
-
-li{
-	font-family: 'FontLI';
-	display: inline-block;
-	margin: 20px;
+p{
+	line-height: 20px;
+	max-width: 500px;
+	margin-right: 110px;
+	font-family: Helvetica;
 }
 
 a {
@@ -72,14 +38,70 @@ a:hover{
 	text-shadow: 1px 1px 10px #0366fc;
 }
 
-/* --- BOTÕES DE LINK --- */
-
-form{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
+/* --- BARRA DO PORFÓLIO --- */
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
+#title{
+	flex-direction: column;
+	line-height: 10px;
+}
+
+li{
+	font-family: 'FontLI';
+	display: inline-block;
+	margin: 20px;
+}
+
+span{
+	color: #00FFEA;
+}
+
+
+/* --- CORPO DO PORTFÓLIO --- */
+h1{
+	font-weight: 200;
+}
+
+h2{
+	font-size: 56px;
+	line-height: 10px;
+}
+
+main{
+	display: flex;
+	flex-direction: row;
+	margin-top: 50px;
+	margin-bottom: 150px;
+	padding-left: 160px;
+}
+
+/* --- INTRODUÇÃO --- */
+div#intro{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* --- IMAGEM RUNA ICON --- */
+article img{
+	animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+	0%, 100%{
+		transform: translateY(0);
+	} 50%{
+		transform: translateY(-50px);
+	}
+}
+
+/* --- BOTÕES DE ACESSO --- */
 input{
     font-family: Helvetica;
     font-weight: bold;
@@ -119,52 +141,19 @@ form input:hover{
     color: #f0f0f0;
 }
 
-/* --- CORPO DO PORTFÓLIO --- */
-h1{
-	font-weight: 200;
-}
 
-h2{
-	font-size: 56px;
-	line-height: 10px;
-}
-
-span{
-	color: #00FFEA;
-}
-
-p{
-	line-height: 20px;
-	max-width: 500px;
-	margin-right: 110px;
-	font-family: Helvetica;
-}
-
-main{
+/* --- INFORMAÇÃO --- */
+.info{
 	display: flex;
 	flex-direction: row;
 	margin-top: 50px;
-    margin-bottom: 50px;
+	margin-bottom: 150px;
 	padding-left: 160px;
 }
 
-/* --- INTRODUÇÃO --- */
-div#intro{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
+/* --- HABILIDADES --- */
 
-/* --- IMAGEM RUNA ICON --- */
-article img{
-	animation: float 3s ease-in-out infinite;
-}
 
-@keyframes float{
-	0%, 100%{
-		transform: translateY(0);
-	} 50%{
-		transform: translateY(-50px);
-	}
-}
+/* --- PROJETOS --- */
+
+/* --- SAIBA MAIS --- */
