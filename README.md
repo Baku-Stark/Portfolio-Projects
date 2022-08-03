@@ -46,7 +46,7 @@ Login | ✔️
 
 <br>
 
-> 💻 HTML
+> 💻 HTML5 e CSS3
 
 Projetos | Conclusão Do Projeto
 --- | ---
