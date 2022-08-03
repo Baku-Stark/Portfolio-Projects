@@ -62,4 +62,5 @@ Projetos | Conclusão Do Projeto
 --- | ---
 Bateria | ❌
 Calculadora | ✔️
+Jogo da Velha | ❌
 Lista de Tarefas | ❌
