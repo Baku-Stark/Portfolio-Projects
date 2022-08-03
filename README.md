@@ -61,5 +61,5 @@ Sign Up Page | ✔️
 Projetos | Conclusão Do Projeto
 --- | ---
 Bateria | ❌
-Calculadora | ❌
+Calculadora | ✔️
 Lista de Tarefas | ❌
