@@ -1,0 +1,92 @@
+/*--- RESET---*/
+* {
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #111111 #ffffff;
+}
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #222222;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+/*--- CORPO---*/
+body{
+    background: linear-gradient(to right,#111111, #07b9f5);
+}
+
+/*--- CONTAINERS ---*/
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-container > button{
+    padding: 32px;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #111111;
+    outline: none;
+    background-color: #111111;
+    color: #f0f8fe;
+}
+
+.grid-container > button:hover{
+    background-color: #f0f8fe;
+    color: #111111;
+    transition: 0.3s all ease-in-out;
+}
+
+.grid-container > .operator{
+    background-color: #07b9f5;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+/*--- TELA DA CALCULADORA ---*/
+.grid-container > .output{
+    grid-column: 1 / -1;
+    display: flex;
+    padding: auto;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > .output > .previous-operand{
+    color: #292929af;
+    font-size: 1.5rem;
+}
+
+.grid-container > .output > .current-operand{
+    color: #2c2c2c;
+    font-size: 2.5rem;
+}
