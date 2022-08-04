@@ -64,4 +64,4 @@ Bateria | ❌
 Cronômetro | ❌
 Calculadora | ✔️
 Jogo da Velha | ❌
-Lista de Tarefas | ❌
+Lista de Tarefas | ✔️
