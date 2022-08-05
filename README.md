@@ -61,7 +61,7 @@ Sign Up Page | ✔️
 Projetos | Conclusão Do Projeto
 --- | ---
 Bateria | ❌
-Cronômetro | ❌
+Cronômetro | ✔️
 Calculadora | ✔️
 Jogo da Velha | ❌
 Lista de Tarefas | ✔️
