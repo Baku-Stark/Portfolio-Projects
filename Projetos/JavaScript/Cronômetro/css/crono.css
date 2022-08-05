@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Digital';
+    src: url("/_Cronfontes/digital-7.ttf");
+}
+
+/* --- RESET --- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100px;
+    font-family: 'Digital';
+}
+
+html{
+    background-color: #111111;
+}
+
+/* ---CONTAINER --- */
+.container{
+    background: #111111;
+    text-align: center;
+}
+
+.numeros{
+    color: #0077ff;
+}
+
+/* --- BOTÕES --- */
+button{
+    font-size: 25px;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #414141;
+    transition: 0.3s all ease-in-out;
+    color: #0077ff;
+}
+
+/* --- HISTÓRICO --- */
