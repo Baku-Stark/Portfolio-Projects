@@ -63,5 +63,5 @@ Projetos | Conclusão Do Projeto
 Bateria | ❌
 Cronômetro | ✔️
 Calculadora | ✔️
-Jogo da Velha | ❌
+Jogo da Velha | ✔️
 Lista de Tarefas | ✔️
