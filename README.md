@@ -60,7 +60,7 @@ Sign Up Page | ✔️
 
 Projetos | Conclusão Do Projeto
 --- | ---
-Bateria | ❌
+Bateria | ✔️
 Cronômetro | ✔️
 Calculadora | ✔️
 Jogo da Velha | ✔️
