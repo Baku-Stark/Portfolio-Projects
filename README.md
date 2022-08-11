@@ -35,12 +35,13 @@ Projetos de um programador novato no universo de programação será comitado aq
 
 <br>
 
-# Estado Dos Projetos
+# Estado dos Projetos
 > 🐍 PYTHON
 
 Projetos | Conclusão Do Projeto
 --- | ---
 Calculadora | ✔️
+Cronômetro | ✔️
 Relógio | ✔️
 Login | ✔️
 
@@ -51,6 +52,7 @@ Login | ✔️
 Projetos | Conclusão Do Projeto
 --- | ---
 Black Holes | ✔️
+Home Page | ❌
 Landing Page | ✔️
 Sign Up Page | ✔️
 
