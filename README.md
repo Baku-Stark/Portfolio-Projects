@@ -52,7 +52,7 @@ Login | ✔️
 Projetos | Conclusão Do Projeto
 --- | ---
 Black Holes | ✔️
-Home Page | ❌
+Home Page | ✔️
 Landing Page | ✔️
 Sign Up Page | ✔️
 
