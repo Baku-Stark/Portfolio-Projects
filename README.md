@@ -40,6 +40,7 @@ Projetos de um programador novato no universo de programação será comitado aq
 
 Projetos | Conclusão Do Projeto
 --- | ---
+Player De Música | ❌
 Calculadora | ✔️
 Cronômetro | ✔️
 Relógio | ✔️
@@ -55,6 +56,7 @@ Black Holes | ✔️
 Home Page | ✔️
 Landing Page | ✔️
 Sign Up Page | ✔️
+Portfólio Face | ❌
 
 <br>
 
