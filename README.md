@@ -56,7 +56,7 @@ Black Holes | ✔️
 Home Page | ✔️
 Landing Page | ✔️
 Sign Up Page | ✔️
-Portfólio Face | ❌
+Portfólio Page | ❌
 
 <br>
 
