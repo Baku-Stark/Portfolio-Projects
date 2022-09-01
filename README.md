@@ -29,7 +29,7 @@
 
 > DESCRIÇÃO
 ```
-Projetos de um programador novato no universo de programação será comitado aqui! 
+Projetos de um programador novato no universo da programação serão comitados aqui! 
 ```
 </div>
 
