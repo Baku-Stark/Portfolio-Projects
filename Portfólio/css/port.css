@@ -19,6 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -38,6 +39,7 @@ h1{
 .intro{
     letter-spacing: 5px;
     color: #ffffff;
+    text-shadow: -3px 6px 10px #000000;
     font-family: 'FontH2';
 }
 
@@ -68,8 +70,10 @@ a:hover{
 /* --- HEADER ---*/
 header{
     top: 0;
+    left: 0;
     width: 100%;
     padding: 5px;
+    z-index: 999;
     display: flex;
     position: fixed;
     justify-content: space-around;
@@ -109,7 +113,7 @@ article{
 }
 
 form{
-    margin-top: 150px;
+    margin-top: 100px;
     display: flex;
     align-self: center;
     justify-content: center;
@@ -133,46 +137,40 @@ a#curriculo:hover{
 }
 /* --- MAIN ---*/
 
+.title{
+    font-size: 3em;
+    color: #f0f0f0;
+    font-family: 'FontLogo';
+}
+
+/* --- INTRO ---*/
+div#intro{
+    width: 100%;
+    height: 100vh;
+    padding: 96px 48px;
+}
 /* --- INTRO ---*/
 
-/* --- INTRO ---*/
-
-/* --- BOTÕES (Contatos) ---*/
-input{
-    height: 50px;
-    font-size: 15px;
-    margin-top: 20px;
-    padding: 20px auto;
-    border-radius: 15px;
-    border: none;
-    font-weight: bold;
-    font-family: Gill Sans, sans-serif;
+/* --- PROJETOS ---*/
+div#projetos{
+    width: 100%;
+    height: 100vh;
+    padding: 96px 48px;
 }
+/* --- PROJETOS ---*/
 
-form input:hover{
-    transition: 0.5s all ease-in-out;
-    letter-spacing: 10px;
-    cursor: pointer;
+/* --- CONTATOS ---*/
+div#contacts{
+    width: 100%;
+    height: 100vh;
+    padding: 96px 48px;
 }
+/* --- CONTATOS ---*/
 
-#Linkedin:hover{
-    background-color: #0366fc;
-    color: #f0f0f0;
+/* --- SAIBA MAIS ---*/
+div#saibamais{
+    width: 100%;
+    height: 100vh;
+    padding: 96px 48px;
 }
-
-#Twitter:hover{
-    background-color: #03afff;
-    color: #f0f0f0;
-}
-
-#Instagram:hover{
-    background: linear-gradient(90deg, #e9337f 0%, #ffffff 0%, #db143c 45%);
-    animation: gradient 15s ease infinite;
-    color: #f0f0f0;
-}
-
-#GitHub:hover{
-    background-color: #000000;
-    color: #f0f0f0;
-}
-/* --- BOTÕES ---*/
+/* --- SAIBA MAIS ---*/
