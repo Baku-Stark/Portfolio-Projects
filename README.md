@@ -52,11 +52,11 @@ Projetos | Conclusão Do Projeto
 
 Projetos | Conclusão Do Projeto
 --- | ---
-Black Holes | ✔️
-Home Page | ✔️
-Landing Page | ✔️
-Sign Up Page | ✔️
-Portfólio Page | ❌
+[Black Holes](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/HTML/Black%20Holes) | ✔️
+[Home Page](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/HTML/Home%20Page) | ✔️
+[Landing Page](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/HTML/Landing%20Page) | ✔️
+[Sign Up Page](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/HTML/Sign%20Up%20Page) | ✔️
+[Portfólio Page](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Portf%C3%B3lio) | ❌
 
 <br>
 
@@ -64,8 +64,8 @@ Portfólio Page | ❌
 
 Projetos | Conclusão Do Projeto
 --- | ---
-Bateria | ✔️
-Cronômetro | ✔️
-Calculadora | ✔️
-Jogo da Velha | ✔️
-Lista de Tarefas | ✔️
+[Bateria](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Bateria) | ✔️
+[Cronômetro](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Cron%C3%B4metro) | ✔️
+[Calculadora](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Calculadora) | ✔️
+[Jogo da Velha](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Jogo%20%20da%20Velha) | ✔️
+[Lista de Tarefas](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Lista%20De%20Tarefas) | ✔️
