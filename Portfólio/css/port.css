@@ -20,6 +20,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -36,11 +37,31 @@ h1{
     font-family: 'FontLogo';
 }
 
-.intro{
+h2{
+    font-size: 25pt;
     letter-spacing: 5px;
-    color: #ffffff;
+    color: #f0f0f0;
     text-shadow: -3px 6px 10px #000000;
     font-family: 'FontH2';
+}
+
+p{
+    color: #f0f0f0;
+}
+
+.intro-text{
+    letter-spacing: 5px;
+    color: #ffffff;
+    animation: float 3s ease-in-out infinite;
+    text-shadow: -3px 6px 10px #000000;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0);
+    } 50% {
+        transform: translateY(-50px);
+    }
 }
 
 ul{
@@ -97,6 +118,7 @@ main{
     width: 100%;
     height: 100vh;
     display: flex;
+    box-shadow: 0px -1px 50px #000000;
     background-image: url("../_portimagens/main.jpeg");
 }
 
@@ -137,10 +159,8 @@ a#curriculo:hover{
 }
 /* --- MAIN ---*/
 
-.title{
-    font-size: 3em;
-    color: #f0f0f0;
-    font-family: 'FontLogo';
+.title-1, .title-2, .title-3, .title-4{
+    visibility: hidden;
 }
 
 /* --- INTRO ---*/
@@ -174,3 +194,29 @@ div#saibamais{
     padding: 96px 48px;
 }
 /* --- SAIBA MAIS ---*/
+
+/* --- FOOTER ---*/
+footer{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    background-color: #000000;
+    box-shadow: 0px 1px 50px #000000;
+}
+
+.left{
+    width: 50%;
+    padding-top: 150px;
+    padding-left: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.right{
+    width: 50%;
+    padding-top: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+/* --- FOOTER ---*/
