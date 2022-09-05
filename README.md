@@ -40,7 +40,7 @@ Projetos de um programador novato no universo da programação serão comitados 
 
 Projetos | Conclusão Do Projeto
 --- | ---
-Player De Música | ❌
+Player De Música | ✔️
 Calculadora | ✔️
 Cronômetro | ✔️
 Relógio | ✔️
