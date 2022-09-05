@@ -40,11 +40,11 @@ Projetos de um programador novato no universo da programação serão comitados 
 
 Projetos | Conclusão Do Projeto
 --- | ---
-Player De Música | ✔️
-Calculadora | ✔️
-Cronômetro | ✔️
-Relógio | ✔️
-Login | ✔️
+[Player de Música](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Player%20de%20Musica) | ✔️
+[Calculadora](https://github.com/Baku-Stark/Portfolio-Baku/blob/main/Projetos/Python/Calculadora.py) | ✔️
+[Cronômetro](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Cron%C3%B4metro) | ✔️
+[Relógio](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Rel%C3%B3gio) | ✔️
+[Login](https://github.com/Baku-Stark/Portfolio-Baku/blob/main/Projetos/Python/login.py) | ✔️
 
 <br>
 
