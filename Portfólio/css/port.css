@@ -157,6 +157,7 @@ a#curriculo{
 
 a#curriculo:hover{
     letter-spacing: 2px;
+    text-shadow: none;
 }
 /* --- MAIN ---*/
 
