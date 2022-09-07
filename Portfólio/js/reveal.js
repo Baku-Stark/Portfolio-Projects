@@ -5,6 +5,13 @@ var slideUp = {
     opacity: 0
 }
 
+var slideContent = {
+    delay: 800,
+    duration: 1000,
+    reset: true,
+    opacity: 0
+}
+
 ScrollReveal().reveal('.title-1', slideUp);
 
 ScrollReveal().reveal('.title-2', slideUp);
@@ -12,3 +19,5 @@ ScrollReveal().reveal('.title-2', slideUp);
 ScrollReveal().reveal('.title-3', slideUp);
 
 ScrollReveal().reveal('.title-4', slideUp);
+
+ScrollReveal().reveal('.container-card', slideContent)
