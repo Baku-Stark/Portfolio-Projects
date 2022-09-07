@@ -30,17 +30,17 @@
 
 /* --- CARD ---*/
 .container-card{
-	margin-top: 150px;
+	margin-top: 50px;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 
 .card{
 	width: 200px;
     height: 200px;
 	padding: 10px;
-	margin-left: 50px;
     border-radius: 20px;
     background-color: #00000062;
 	backdrop-filter: blur(10px);
@@ -52,9 +52,5 @@
 	width: 210px;
     height: 205px;
 	transition: 0.3s all ease-in-out;
-}
-
-.card:first-child{
-	margin-left: 0;
 }
 /* --- CARD ---*/
