@@ -97,6 +97,7 @@ header{
     z-index: 999;
     display: flex;
     position: fixed;
+    flex-wrap: wrap;
     justify-content: space-around;
     background: rgba(0, 0, 0, 0.466);
     backdrop-filter: blur(10px);
