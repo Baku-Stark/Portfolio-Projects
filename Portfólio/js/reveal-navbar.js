@@ -14,17 +14,10 @@ var slideContent = {
 }
 
 ScrollReveal().reveal('.title-1', slideUp);
-
-ScrollReveal().reveal('.title-2', slideUp);
-
-ScrollReveal().reveal('.title-3', slideUp);
-
-ScrollReveal().reveal('.title-4', slideUp);
-
-ScrollReveal().reveal('.container-card', slideContent)
+ScrollReveal().reveal('.content-container', slideContent)
 
 
-// Mobile
+
 // Mobile
 class MobileNavbar{
     constructor(mobileMenu, navList, navLinks) {
