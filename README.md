@@ -1,7 +1,7 @@
 # Portfólio-Baku
 <div align="left">
 
-![image](https://user-images.githubusercontent.com/103138773/191082511-9629273f-5dba-4682-bc0f-12fc09ca7514.png)
+![image](https://user-images.githubusercontent.com/103138773/191573351-9c472326-e1e1-4556-be7d-833569a3cebc.png)
 
 > LINGUAGENS
 <div>
