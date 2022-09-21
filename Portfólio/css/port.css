@@ -14,25 +14,26 @@
     font-family: 'FontH2';
     src: url("../_portfontes/critical-mass-ldr.ttf");
 }
+/* --- CORES ---*/
+:root{
+    --corH1: #2b0279;
+    --corH2: #5c595a;
+    --corLetter: #f0f4f7;
+    --corLinkHover: #5d33a0;
+}
+/* --- CORES ---*/
 
+/* --- NAVBAR ---*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    color: var(--corLetter);
     font-family: 'Poppins', sans-serif;
 }
 
-/* --- CORES ---*/
-:root{
-    --corH1: #2b0279;
-    --corH2: #F22973;
-    --corLetter: #f0f4f7;
-    --corLinkHover: #ff0077;
-}
-/* --- CORES ---*/
 
-/* --- NAVBAR ---*/
 h1{
     font-size: 25pt;
     color: var(--corH1);
@@ -41,13 +42,13 @@ h1{
 }
 
 h2{
+    letter-spacing: 5px;
     color: var(--corH2);
     font-family: 'FontH2';
 }
 
 .mobile-menu{
     display: none;
-    cursor: pointer;
 }
 
 .mobile-menu div{
@@ -70,7 +71,7 @@ nav{
     position: fixed;
     align-items: center;
     justify-content: space-around;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(50px);
     background: rgba(0, 0, 0, 0.5);
 }
 
@@ -98,7 +99,7 @@ nav{
 }
 
 .nav-list li > a:hover{
-    font-size: 23pt;
+    font-size: 20pt;
     transition: 0.3s ease-in-out;
     color: var(--corLinkHover);
 }
@@ -159,6 +160,12 @@ main{
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.astro{
+    margin: auto;
+    border-radius: 500px;
+    display: flex;
+} 
+
 .intro-text{
     font-size: 40pt;
     letter-spacing: 2px;
@@ -188,6 +195,22 @@ main{
 
 .container{
     padding: 95px 40px;
+}
+
+.content-container > p{
+    font-size: 15pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container{
+    height: 75vh;
+    padding: 10px;
+    margin-top: 5vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 /* --- SECTION (INTRODUÇÃO ---*/
 

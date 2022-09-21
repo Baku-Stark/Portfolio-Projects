@@ -13,6 +13,7 @@ var slideContent = {
     opacity: 0
 }
 
+ScrollReveal().reveal('.astro', slideUp);
 ScrollReveal().reveal('.title-1', slideUp);
 ScrollReveal().reveal('.content-container', slideContent)
 
