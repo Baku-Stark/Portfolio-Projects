@@ -136,8 +136,7 @@ button > a:hover{
 
 /* --- PORTFÓLIO ---*/
 body{
-    background-size: cover;
-    background-image: url("../_portimagens/html-back.gif");
+    background: linear-gradient(-45deg, #111111, #1d1d1d, #202020, #353535);
 }
 
 main{
@@ -162,7 +161,7 @@ main{
 
 .astro{
     margin: auto;
-    border-radius: 500px;
+    border-radius: 50%;
     display: flex;
 } 
 
