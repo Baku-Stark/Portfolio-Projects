@@ -17,7 +17,7 @@
 /* --- CORES ---*/
 :root{
     --corH1: #2b0279;
-    --corH2: #5c595a;
+    --corH2: #4004a1;
     --corLetter: #f0f4f7;
     --corLinkHover: #5d33a0;
 }
@@ -43,6 +43,7 @@ h1{
 
 h2{
     letter-spacing: 5px;
+    text-shadow: 1px 5px 0 #1111119a;
     color: var(--corH2);
     font-family: 'FontH2';
 }
@@ -135,13 +136,21 @@ button > a:hover{
 /* --- NAVBAR ---*/
 
 /* --- PORTFÓLIO ---*/
-body{
-    background: linear-gradient(-45deg, #111111, #1d1d1d, #202020, #353535);
+main{
+    animation: bgTransition all 5s ease-in-out infinite;
+    background: linear-gradient(-45deg, #111111, #1d1d1d, #202020, #161616);
 }
 
-main{
-    backdrop-filter: blur(20px);
-    background: rgba(17, 17, 17, 0.5);
+@keyframes bgTransition{
+    0% {
+        background-position: 0% 80%;
+    }
+    50% {
+        background-position: 80% 100%;
+    }
+    100% {
+        background-position: 0% 90%;
+    }
 }
 
 .layer-background{
