@@ -65,6 +65,7 @@ Projetos | Conclusão Do Projeto
 
 Projetos | Conclusão Do Projeto
 --- | ---
+Player de Música | ❌
 [Bateria](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Bateria) | ✔️
 [Cronômetro](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Cron%C3%B4metro) | ✔️
 [Calculadora](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Calculadora) | ✔️
