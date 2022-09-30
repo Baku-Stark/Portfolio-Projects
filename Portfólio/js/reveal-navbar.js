@@ -1,13 +1,13 @@
 // Slide
 var slideUp = {
-    delay: 500,
+    delay: 300,
     duration: 1000,
     reset: true,
     opacity: 0
 }
 
 var slideContent = {
-    delay: 800,
+    delay: 500,
     duration: 1000,
     reset: true,
     opacity: 0
@@ -16,6 +16,7 @@ var slideContent = {
 ScrollReveal().reveal('.astro', slideUp);
 ScrollReveal().reveal('.title-1', slideUp);
 ScrollReveal().reveal('.content-container', slideContent)
+ScrollReveal().reveal('.content-container-projects', slideContent)
 
 
 
