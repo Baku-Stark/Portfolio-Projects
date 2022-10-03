@@ -228,8 +228,8 @@ section.content{
 
 /* --- SECTION (PROJETOS) ---*/
 .content-container-projects{
-    height: 65vh;
-    margin-top: 26vh;
+    height: 75vh;
+    margin-top: 15vh;
     display: flex;
     align-content: center;
     justify-content: space-between;
@@ -241,7 +241,6 @@ section.content{
     padding: 20px;
     border-radius: 20px;
     display: flex;
-    backdrop-filter: blur(20px);
     background-color: #00000079;
 }
 
@@ -254,6 +253,10 @@ section.content{
     font-size: 25pt;
     border-bottom: 1px solid #f0f4f7;
     font-family: 'FontA';
+}
+
+.card-content{
+    padding: 15px;
 }
 /* --- SECTION (PROJETOS) ---*/
 
