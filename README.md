@@ -41,6 +41,7 @@ Projetos de um programador novato no universo da programação serão comitados 
 Projetos | Conclusão Do Projeto
 --- | ---
 [Calculadora De Idade](https://github.com/Baku-Stark/Portfolio-Baku/blob/main/Projetos/Python/Calculadora%20de%20Idade.py) | ✔️
+[Lista Telefônica](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Lista%20Telef%C3%B4nica) | ✔️
 [Player de Música](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Player%20de%20Musica) | ✔️
 [Calculadora](https://github.com/Baku-Stark/Portfolio-Baku/blob/main/Projetos/Python/Calculadora.py) | ✔️
 [Cronômetro](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Cron%C3%B4metro) | ✔️
