@@ -14,14 +14,14 @@
         right: 0;
         width: 50vw;
         height: 92vh;
+        backdrop-filter: blur(20px);
         transform: translateX(100%);
         position: absolute;
         align-items: center;
         flex-direction: column;
         justify-content: space-evenly;
-        transition: transform 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
         background: #0000009c;
-        backdrop-filter: blur(20px);
     }
 
     .nav-list li{
