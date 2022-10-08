@@ -1,3 +1,4 @@
+from distutils.command.config import config
 from tkinter import *
 from tkinter import messagebox
 from tkinter.ttk import Treeview
@@ -177,14 +178,21 @@ class App(Frame):
         tabela_head = ['ID', 'Nome', 'DDD', 'Telefone']
         
         hd = ["nw", "nw", "nw", "nw"]
-        h = [30, 100, 40, 170]
+        h = [30, 100, 40, 150]
         n = 0
 
         list_tel = Treeview(
             root, selectmode="extended", columns=tabela_head, show="headings"
         )
 
+        vsb = Scrollbar(
+            root, orient='vertical', command=list_tel.yview
+        )
+
+        list_tel.configure(yscrollcommand=vsb.set)
+
         list_tel.place(x=230, y=0)
+        vsb.place(x=552, y=0)
 
         for col in tabela_head:
             list_tel.heading(col, text=col.title(), anchor=CENTER)
