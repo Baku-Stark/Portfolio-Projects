@@ -1,4 +1,4 @@
-// Slide
+// SLIDE
 var slideUp = {
     delay: 300,
     duration: 1000,
@@ -18,9 +18,10 @@ ScrollReveal().reveal('.title-1', slideUp);
 ScrollReveal().reveal('.content-container', slideContent)
 ScrollReveal().reveal('.content-container-projects', slideContent)
 
+// EVENTOS
+document.querySelector('p.res').onmouse
 
-
-// Mobile
+// MOBILE
 class MobileNavbar{
     constructor(mobileMenu, navList, navLinks) {
         this.mobileMenu = document.querySelector(mobileMenu);
