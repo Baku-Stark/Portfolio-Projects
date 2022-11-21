@@ -13,7 +13,8 @@ janela.resizable(width=FALSE, height=FALSE)
 
 # ----------------------------------------
 # função
-os.chdir(r'C:\Users\Milena\Desktop\Scripts de Programação\Scripts Python\Music Player\music')
+user = os.getlogin()
+os.chdir(rf'C:\Users\{user}\Documents\Portfólio Git\Portfolio-Projects\Projetos\Python\Player de Musica\music')
 musicas = os.listdir()
 
 def show():
