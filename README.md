@@ -1,7 +1,9 @@
 # Portfólio-Baku
-<div align="left">
+<div align="center">
 
 ![image](https://user-images.githubusercontent.com/103138773/195387571-548aa797-9ff8-4306-a6b5-28fa33e32c04.png)
+**[Portfólio - Wallace](https://baku-stark.github.io/Portfolio-Wallace/indexBaku.html)**
+</div>
 
 > LINGUAGENS
 <div>
@@ -40,6 +42,7 @@ Projetos de um programador novato no universo da programação serão comitados 
 
 Projetos | Conclusão Do Projeto
 --- | ---
+[Alarme](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Python/Alarme) | ✔️
 [Calculadora De Idade](https://github.com/Baku-Stark/Portfolio-Baku/blob/main/Projetos/Python/Calculadora%20de%20Idade.py) | ✔️
 [Lista Telefônica](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Lista%20Telef%C3%B4nica) | ✔️
 [Player de Música](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Player%20de%20Musica) | ✔️
