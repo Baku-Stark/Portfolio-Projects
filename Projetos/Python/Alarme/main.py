@@ -4,12 +4,15 @@ from tkinter import *
 from tkinter import tix
 from tkinter import messagebox
 
-# IMPORTAÇÕES [datetime]
-from datetime import *
-
 # IMPORTAÇÕES [pygame]
 import pygame
 from pygame import mixer
+
+# IMPORTAÇÕES [datetime]
+from datetime import *
+
+# IMPORTAÇÕES [imagens]
+from PIL import Image, ImageTk
 
 # ===============================================
 # CONFIGURAÇÃO [CORES]
@@ -134,11 +137,19 @@ class Alarm(Functions):
             bg=lightBlack, fg=freshRed
         )
 
+        self.img = Image.open('img/alarme.png')
+        self.img = self.img.resize((130, 130))
+        self.img = ImageTk.PhotoImage(self.img)
+        self.set_image = Label(
+            self.frameRight, image=self.img, bg=lightBlack
+        )
+
         # CONFIGURAÇÃO [PLACE > LABEL]
         self.horas.place(relx=0.8, rely=0)
         self.date.place(relx=0.02, rely=0)
         self.situation_title.place(relx=0.07, rely=0.7)
         self.situation_situa.place(relx=0.35, rely=0.7)
+        self.set_image.place(relx=0.25, rely=0.15)
 
 # ===============================================
 # CONFIGURAÇÃO [APLICAÇÃO > ATIVAÇÃO]
