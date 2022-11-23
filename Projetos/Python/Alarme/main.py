@@ -70,7 +70,11 @@ class Functions():
 
             self.situation_situa['fg'] = lemonGreen
             self.situation_situa['text'] = "Ativado!"
-            self.playAlarm()
+
+            self.horas_set = str(self.horas_set)
+            self.minutos_set = str(self.minutos_set)
+            if self.horas_set == self.horas_now and self.minutos_set == self.minut_now:
+                self.playAlarm()
     
     def consult(self):
         self.root_consult = Toplevel()
@@ -112,9 +116,8 @@ class Functions():
         self.label_semana.place(relx=0.02, rely=0.45)
 
     def playAlarm(self):
-        if self.horas_set == self.horas_now and self.minutos_set == self.minut_now:
-            mixer.music.load("alarm-music/alarm.wav")
-            mixer.music.play()
+        mixer.music.load('alarm-music/alarm.wav')
+        mixer.music.play()
 
 class Alarm(Functions):
     def __init__(self):
