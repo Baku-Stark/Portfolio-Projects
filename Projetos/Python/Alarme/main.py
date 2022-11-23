@@ -18,6 +18,7 @@ from PIL import Image, ImageTk
 # CONFIGURAÇÃO [CORES]
 lightBlack = "#111111"
 aliceBlue = "#f0f8ff"
+lightGray = "#737373"
 lemonGreen = "#35FF1E"
 freshRed = "#AA202D"
 
@@ -31,13 +32,45 @@ class Functions():
         ano = date_now.year
         horas = date_now.strftime('%H:%M')
 
+        self.horas_now = date_now.strftime('%H')
+        self.minut_now = date_now.strftime('%M')
+
         self.horas.config(text=horas)
         self.horas.after(200, self.hours)
         self.date['text'] = f"{dia}/{mes}/{ano}"
         
     def saveHorario(self):
-        self.situation_situa['fg'] = lemonGreen
-        self.situation_situa['text'] = "Ativado!"
+        self.semana_set = self.spin_semana.get()
+        self.horas_set = int(self.spin_horas.get())
+        self.minutos_set = int(self.spin_minutos.get())
+        
+        if self.semana_set not in self.semanas_list:
+            messagebox.showerror(
+                title="Semana Incorreta",
+                message="A semana selecionada não está na lista."
+            )
+        
+        elif self.horas_set > 23 or self.horas_set < 0:
+            messagebox.showerror(
+                title="Horário Incorreto",
+                message="A hora selecionada está errada. Por favor, faça novamente."
+            )
+        
+        elif self.minutos_set > 60 or self.minutos_set < 0:
+            messagebox.showerror(
+                title="Minuto Incorreto",
+                message="A definição para o minuto está incorreta."
+            )
+        
+        else:
+            messagebox.showinfo(
+                title="Alarme Definido",
+                message="O alarme foi definido com sucesso!"
+            )
+
+            self.situation_situa['fg'] = lemonGreen
+            self.situation_situa['text'] = "Ativado!"
+            self.playAlarm()
     
     def consult(self):
         self.root_consult = Toplevel()
@@ -56,12 +89,32 @@ class Functions():
             self.container, text="00:00", font=('Impact 20'),
             bg=lightBlack, fg=aliceBlue, bd=0
         )
+        if self.horas_set < 10 and self.minutos_set < 10:
+            self.label_horario['text'] = f"0{str(self.horas_set)}:0{str(self.minutos_set)}"
+        elif self.horas_set < 10 and self.minutos_set > 10:
+            self.label_horario['text'] = f"0{str(self.horas_set)}:{str(self.minutos_set)}"
+        elif self.horas_set > 10 and self.minutos_set < 10:
+            self.label_horario['text'] = f"{str(self.horas_set)}:0{str(self.minutos_set)}"
+        else:
+            self.label_horario['text'] = f"{str(self.horas_set)}:{str(self.minutos_set)}"
+        
+        self.label_semana = Label(
+            self.container, text="Dia da semana", font=('Arial 8 italic'),
+            bg=lightBlack, fg=lightGray, bd=0
+        )
+        self.label_semana['text'] = self.semana_set
 
         # CONFIGURAÇÃO [PLACE]
         self.root_frame.place(relwidth=1, relheight=1)
         self.border.place(relx=0, rely=0.01, relwidth=1, relheight=0.4)
         self.container.place(relx=0.01, rely=0.01, relwidth=0.98, relheight=0.98)
         self.label_horario.place(relx=0.02, rely=0.01)
+        self.label_semana.place(relx=0.02, rely=0.45)
+
+    def playAlarm(self):
+        if self.horas_set == self.horas_now and self.minutos_set == self.minut_now:
+            mixer.music.load("alarm-music/alarm.wav")
+            mixer.music.play()
 
 class Alarm(Functions):
     def __init__(self):
@@ -113,11 +166,36 @@ class Alarm(Functions):
     def contentLeft(self):
         self.label_horas = Label(
             self.frameLeft, text="Definir horas*",
-            font=('Arial 10'), bg=aliceBlue, fg=lightBlack
+            font=('Arial 10 bold'), bg=aliceBlue, fg=lightBlack
+        )
+        self.spin_horas = Spinbox(
+            self.frameLeft, from_=0, to=23, font=('Arial 13 bold')
+        )
+
+        self.label_minutos = Label(
+            self.frameLeft, text="Definir minutos*",
+            font=('Arial 10 bold'), bg=aliceBlue, fg=lightBlack
+        )
+        self.spin_minutos = Spinbox(
+            self.frameLeft, from_=0, to=59, font=('Arial 13 bold')
+        )
+
+        self.bar_div = Label(
+            self.frameLeft, bg=lightBlack
+        )
+
+        self.semanas_list = ["Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado", "Domingo"]
+        self.spin_semana = Spinbox(
+            self.frameLeft, values=self.semanas_list, font=('Arial 15 bold')
         )
 
         # CONFIGURAÇÃO [PLACE]
-        self.label_horas.place(relx=0.01, rely=0.01)
+        self.label_horas.place(relx=0.01, rely=0.04)
+        self.spin_horas.place(relx=0.01, rely=0.10)
+        self.label_minutos.place(relx=0.01, rely=0.25)
+        self.spin_minutos.place(relx=0.01, rely=0.31)
+        self.bar_div.place(relx=0, rely=0.46, relwidth=1, relheight=0)
+        self.spin_semana.place(relx=0, rely=0.55, relwidth=1, relheight=0.25)
 
     def contentRight(self):
         self.horas = Label(
@@ -147,11 +225,12 @@ class Alarm(Functions):
         # CONFIGURAÇÃO [PLACE > LABEL]
         self.horas.place(relx=0.8, rely=0)
         self.date.place(relx=0.02, rely=0)
-        self.situation_title.place(relx=0.07, rely=0.7)
-        self.situation_situa.place(relx=0.35, rely=0.7)
+        self.situation_title.place(relx=0.22, rely=0.7)
+        self.situation_situa.place(relx=0.45, rely=0.7)
         self.set_image.place(relx=0.25, rely=0.15)
 
 # ===============================================
 # CONFIGURAÇÃO [APLICAÇÃO > ATIVAÇÃO]
 if __name__ == '__main__':
+    mixer.init()
     Alarm()
