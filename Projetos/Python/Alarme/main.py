@@ -8,8 +8,9 @@ from tkinter import messagebox
 import pygame
 from pygame import mixer
 
-# IMPORTAÇÕES [datetime]
+# IMPORTAÇÕES [datetime e time]
 from datetime import *
+from time import sleep
 
 # IMPORTAÇÕES [imagens]
 from PIL import Image, ImageTk
@@ -21,22 +22,22 @@ aliceBlue = "#f0f8ff"
 lightGray = "#737373"
 lemonGreen = "#35FF1E"
 freshRed = "#AA202D"
+check_in = "No-Check!"
 
 # ===============================================
 # CONFIGURAÇÃO [APLICAÇÃO]
 class Functions():
-    def hours(self):
-        date_now = datetime.now()
-        dia = date_now.day
-        mes = date_now.month
-        ano = date_now.year
-        horas = date_now.strftime('%H:%M')
+    def horaAtual(self):
+        self.date_now = datetime.now()
+        self.hora_atual= self.date_now.strftime('%H:%M')
 
-        self.horas_now = date_now.strftime('%H')
-        self.minut_now = date_now.strftime('%M')
+        # CONFIGURAÇÃO [LABEL - self.horas]
+        self.horas.after(1000, self.horaAtual)
+        self.horas['text'] = self.hora_atual
 
-        self.horas.config(text=horas)
-        self.horas.after(200, self.hours)
+        dia = self.date_now.day
+        mes = self.date_now.month
+        ano = self.date_now.year
         self.date['text'] = f"{dia}/{mes}/{ano}"
         
     def saveHorario(self):
@@ -68,13 +69,9 @@ class Functions():
                 message="O alarme foi definido com sucesso!"
             )
 
+            self.playAlarm()
             self.situation_situa['fg'] = lemonGreen
             self.situation_situa['text'] = "Ativado!"
-
-            self.horas_set = str(self.horas_set)
-            self.minutos_set = str(self.minutos_set)
-            if self.horas_set == self.horas_now and self.minutos_set == self.minut_now:
-                self.playAlarm()
     
     def consult(self):
         self.root_consult = Toplevel()
@@ -93,6 +90,7 @@ class Functions():
             self.container, text="00:00", font=('Impact 20'),
             bg=lightBlack, fg=aliceBlue, bd=0
         )
+    
         if self.horas_set < 10 and self.minutos_set < 10:
             self.label_horario['text'] = f"0{str(self.horas_set)}:0{str(self.minutos_set)}"
         elif self.horas_set < 10 and self.minutos_set > 10:
@@ -116,8 +114,18 @@ class Functions():
         self.label_semana.place(relx=0.02, rely=0.45)
 
     def playAlarm(self):
-        mixer.music.load('alarm-music/alarm.wav')
-        mixer.music.play()
+        self.root.after(1000, self.playAlarm)
+        try:
+            self.hoursNow_set = self.date_now.strftime('%H:%M')
+            self.alarmtime = f"{str(self.horas_set)}:{str(self.minutos_set)}"
+            print(F'\033[40mAlarme não foi definido.\n Hora Definida: {self.hoursNow_set}\033[m')
+            if self.hoursNow_set == self.alarmtime:
+                mixer.music.load('alarm-music/alarm.wav')
+                mixer.music.play()
+        
+        except AttributeError:
+            print('\033[40mAlarme não foi definido.\033[m')
+        
 
 class Alarm(Functions):
     def __init__(self):
@@ -129,7 +137,7 @@ class Alarm(Functions):
         self.contentLeft()
         self.contentRight()
         # ------------------
-        self.hours()
+        self.horaAtual()
         self.root.mainloop()
 
     def telaApp(self):
