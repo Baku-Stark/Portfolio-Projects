@@ -1,9 +1,4 @@
 # Portfólio-Baku
-<div align="center">
-
-![image](https://user-images.githubusercontent.com/103138773/195387571-548aa797-9ff8-4306-a6b5-28fa33e32c04.png)
-**[Portfólio - Wallace](https://baku-stark.github.io/Portfolio-Wallace/indexBaku.html)**
-</div>
 
 > LINGUAGENS
 <div>
