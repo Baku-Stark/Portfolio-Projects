@@ -1,0 +1,26 @@
+==================== IMPORTAÇÕES ====================
+from tkinter import *
+from tkinter import ttk
+from tkinter import tix
+from tkinter import messagebox
+
+# Gráficos[Matplotlib]
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
+# reportlab [PDF]
+import webbrowser
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter, A4
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.platypus import SimpleDocTemplate, Image
+
+from functions import *
+==================== IMPORTAÇÕES ====================
+
+==================== AMBIENTE VIRUTAL ====================
+python -m venv amb main.py
+"local do diretório"\amb\Scripts\active
+==================== AMBIENTE VIRUTAL ====================
