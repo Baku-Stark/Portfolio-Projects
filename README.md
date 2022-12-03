@@ -37,6 +37,7 @@ Projetos de um programador novato no universo da programação serão comitados 
 
 Projetos | Conclusão Do Projeto
 --- | ---
+[Cadastro de Clientes](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Python/Cadastro%20de%20Clientes) | ✔️
 [Alarme](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Python/Alarme) | ✔️
 [Calculadora De Idade](https://github.com/Baku-Stark/Portfolio-Baku/blob/main/Projetos/Python/Calculadora%20de%20Idade.py) | ✔️
 [Lista Telefônica](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Lista%20Telef%C3%B4nica) | ✔️
