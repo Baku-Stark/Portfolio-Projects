@@ -198,12 +198,12 @@ class AppCalculator(Calculo):
 # ============================================================
 # APPLICAÇÃO [ativda]
 try:
-    AppCalculator()
     if __name__ == '__main__':
         letSet = "\033[47m  \033[m"
         statusSucess = "\033[46m Aplicação efetuada com sucesso!!! \033[m" #Cyan Background
         newSetSucess = f"\033[1m{statusSucess}\033[m"
         print(f"{letSet}{newSetSucess}")
+    AppCalculator()
 
 
 except AttributeError as e:
