@@ -4,6 +4,9 @@ footer{
     .config-footer{
         text-align: center;
         @include displayNormal;
+        @include screen480px{
+            margin-bottom: 50px;
+        }
         h3.footer-title{
             font-size: 2rem;
             font-family: 'OuterLimits';
@@ -14,7 +17,11 @@ footer{
             background-color: #ffffff62;
         }
         p.footer-text{
+            font-size: 1em;
             color: #ffffffa6;
+            @include screen480px{
+                font-size: 0.9em;
+            }
         }
         article{
             margin-left: 10px;
@@ -26,38 +33,14 @@ footer{
                     font-size: 1.5em;
                     margin-left: 5px;
                 }
-            }
-            a.github:hover{
-                cursor: pointer;
-                background-image: linear-gradient(to right, $github);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                transition: .3s ease-in-out;
-            }
-            a.twitter:hover{
-                cursor: pointer;
-                background-image: linear-gradient(to right, $twitter);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                transition: .3s ease-in-out;
-            }
-            a.instagram:hover{
-                cursor: pointer;
-                background-image: linear-gradient(to right, $instagram);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                transition: .3s ease-in-out;
-            }
-            a.linkedin:hover{
-                cursor: pointer;
-                background-image: linear-gradient(to right, $linkedin);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                transition: .3s ease-in-out;
+                &:hover{
+                    cursor: pointer;
+                    background-image: linear-gradient(to right, $gradientHover);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    transition: .3s ease-in-out;
+                }
             }
         }
     }
@@ -82,7 +65,11 @@ footer{
     .config-footer-2{
         text-align: left;
         p.footer-text{
+            font-size: 1em;
             color: #ffffffa6;
+            @include screen480px{
+                font-size: 0.8em;
+            }
         }
     }
 }
