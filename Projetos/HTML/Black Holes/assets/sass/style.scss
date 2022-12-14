@@ -1,0 +1,26 @@
+@import 'variables.scss', 'footer.scss';
+
+@font-face {
+    font-family: 'OuterLimits';
+    src: url('../font/SFOuterLimits.ttf') format("truetype");
+}
+
+/* CONFIG. [gerais] */ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.pad-square{
+    padding: 50px 50px;
+    @include screen480px{
+        padding: 50px 10px;
+    }
+}

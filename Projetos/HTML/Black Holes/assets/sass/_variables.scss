@@ -1,0 +1,31 @@
+$Black: #000;
+$lightBlack: #111111;
+$aliceBlue: #f0f8ff;
+$darkClaw: #001a1f;
+$darkGreen: #00536b;
+$oceanGrenn: #00b9a1;
+$lightGreen: #c5fb88;
+
+$twitter: #23A4F2, #50B7F5, #80CBF7;
+$instagram: #D93662, #D9328E, #8D33A6, #F2AC57, #F25F29;
+$linkedin:#014283, #0274B3, #EFF6FA;
+$github: #535353, #131313;
+
+
+@mixin displayNormal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin displayPersonal($justify-content){
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+}
+
+@mixin screen480px{
+    @media screen and (max-width: 480px){
+        @content;
+    }
+}

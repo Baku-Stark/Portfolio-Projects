@@ -1,0 +1,88 @@
+footer{
+    color: $aliceBlue;
+    background-color: $lightBlack;
+    .config-footer{
+        text-align: center;
+        @include displayNormal;
+        h3.footer-title{
+            font-size: 2rem;
+            font-family: 'OuterLimits';
+        }
+        div.divider-line{
+            width: 2px;
+            height: 60px;
+            background-color: #ffffff62;
+        }
+        p.footer-text{
+            color: #ffffffa6;
+        }
+        article{
+            margin-left: 10px;
+            a{
+                font-size: 1.5em;
+                margin-left: 15px;
+                color: $aliceBlue;
+                @include screen480px{
+                    font-size: 1.5em;
+                    margin-left: 5px;
+                }
+            }
+            a.github:hover{
+                cursor: pointer;
+                background-image: linear-gradient(to right, $github);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                transition: .3s ease-in-out;
+            }
+            a.twitter:hover{
+                cursor: pointer;
+                background-image: linear-gradient(to right, $twitter);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                transition: .3s ease-in-out;
+            }
+            a.instagram:hover{
+                cursor: pointer;
+                background-image: linear-gradient(to right, $instagram);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                transition: .3s ease-in-out;
+            }
+            a.linkedin:hover{
+                cursor: pointer;
+                background-image: linear-gradient(to right, $linkedin);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+    hr.divider-line{
+        margin: 30px 0 30px 0;
+    }
+    .footer-span{
+        font-weight: bold;
+    }
+    li{
+        color: #ffffffa6;
+        a{
+            font-size: 0.9em;
+            color: #ffffffa6;
+            &:hover{
+                cursor: pointer;
+                color: #ffffffa6;
+                text-decoration: underline;
+            }
+        }
+    }
+    .config-footer-2{
+        text-align: left;
+        p.footer-text{
+            color: #ffffffa6;
+        }
+    }
+}
