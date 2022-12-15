@@ -10,15 +10,23 @@ footer{
         h3.footer-title{
             font-size: 2rem;
             font-family: 'OuterLimits';
+            @include screen999px{
+                font-size: 1rem;
+            }
+            
         }
         div.divider-line{
             width: 2px;
             height: 60px;
             background-color: #ffffff62;
+            margin: 0 20px 0 20px;
         }
         p.footer-text{
             font-size: 1em;
             color: #ffffffa6;
+            @include screen999px{
+                font-size: 0.9em;
+            }
             @include screen480px{
                 font-size: 0.9em;
             }
@@ -44,9 +52,6 @@ footer{
             }
         }
     }
-    hr.divider-line{
-        margin: 30px 0 30px 0;
-    }
     .footer-span{
         font-weight: bold;
     }
@@ -67,6 +72,9 @@ footer{
         p.footer-text{
             font-size: 1em;
             color: #ffffffa6;
+            @include screen999px{
+                font-size: 0.9em;
+            }
             @include screen480px{
                 font-size: 0.8em;
             }
