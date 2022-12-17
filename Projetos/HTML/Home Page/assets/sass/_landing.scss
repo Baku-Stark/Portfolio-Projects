@@ -1,0 +1,43 @@
+.custom-shape-divider-top-1671299869{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1671299869 svg{
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 232px;
+}
+
+.custom-shape-divider-top-1671299869 .shape-fill{
+    fill: #111111;
+}
+
+div.container-landing{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../img/eeekurt.gif');
+    div.container-landing-layer{
+        width: 100%;
+        height: 100vh;
+        background-color: #11111179;
+        @include displayPattern;
+        .col-12{
+            margin-top: 35px;
+            .title-layer{
+                font-size: 5.5em;
+                text-shadow: 3px 3px 10px #11111179;
+            }
+        }
+        .text-layer{
+            font-size: 1.2em;
+            color: #e4e9f757;
+            text-shadow: 3px 3px 10px #11111179;
+        }
+    }
+}

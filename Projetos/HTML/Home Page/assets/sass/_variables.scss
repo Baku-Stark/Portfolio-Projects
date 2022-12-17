@@ -1,0 +1,72 @@
+$body-color: #111111;
+$navbar-color: #707070;
+$primary-color: #C21F2B;
+$primary-color-light: #3A383C;
+$toggle-color: #f0f8ff;
+$text-color: #E4E9F7;
+
+/* Transition */
+$tran-03: all 0.2s ease;
+$tran-03: all 0.3s ease;
+$tran-04: all 0.4s ease;
+$tran-05: all 0.5s ease;
+
+@font-face {
+    font-family: 'Nasalization';
+    src: url('../font/nasalization-rg.otf') format("OpenType");
+}
+
+@mixin displayPattern{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin displayCustom($justify-content){
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+}
+
+@mixin displayCustom-2($flex-direction, $justify-content){
+    display: flex;
+    align-items: center;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+
+@mixin screen1200px{
+    @media screen and (min-width: 1200px){
+        @content;
+    }
+}
+
+@mixin screen1199px{
+    @media screen and (max-width: 1199px){
+        @content;
+    }
+}
+
+@mixin screen999px{
+    @media screen and (max-width: 999px){
+        @content;
+    }
+}
+
+@mixin screen770px{
+    @media screen and (max-width: 770px){
+        @content;
+    }
+}
+
+@mixin screen480px{
+    @media screen and (max-width: 480px){
+        @content;
+    }
+}
+
+@mixin screen414px{
+    @media screen and (max-width: 414px){
+        @content;
+    }
+}

@@ -1,7 +1,63 @@
+@import '_variables.scss', '_navbar.scss', '_landing.scss', '_section-01.scss';
+
+:root{
+    --body-color: #E4E9F7;
+    --navbar-color: #FFF;
+    --primary-color: #C21F2B;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #111111;
+}
+
+.darkmode{
+    --body-color: #111111;
+    --navbar-color: #707070;
+    --primary-color: #C21F2B;
+    --primary-color-light: #3A383C;
+    --toggle-color: #f0f8ff;
+    --text-color: #E4E9F7;
+    transition: $tran-03;
+}
+
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    a{
+        text-decoration: none;   
+        color: var(--text-color);
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+}
+
+body{
+    transition: $tran-03;
+    background-color: var(--body-color);
+}
+
+hr {
+    margin: 1rem 0;
+    color: var(--text-color);
+    border: 0;
+    border-top: 1px solid;
+    opacity: .25;
+}
+
+p{
+    color: var(--text-color);
+}
+
+h1{
+    color: $text-color;
+    font-family: 'Nasalization';
+}
+
+h5.offcanvas-title{
+    font-size: 3em;
+    color: $text-color;
+    font-family: 'Nasalization';
 }
