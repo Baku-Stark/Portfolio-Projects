@@ -1,192 +1,268 @@
+#  ======================================================
+# IMPORTAÇÃO [os]
 import os
+# IMPORTAÇÃO [tkinter, messagebox]
 from tkinter import *
+from tkinter import messagebox
+# IMPORTAÇÃO [PIL]
 from PIL import Image, ImageTk
-
-#pygame
-import pygame
+# IMPORTAÇÃO [pygame]
 from pygame import mixer
 
-janela = Tk()
-janela.geometry("352x255")
-janela.title("Music Player")
-janela.resizable(width=FALSE, height=FALSE)
 
-# ----------------------------------------
-# função
-user = os.getlogin()
-os.chdir(rf'C:\Users\{user}\Documents\Portfólio Git\Portfolio-Projects\Projetos\Python\Player de Musica\music')
-musicas = os.listdir()
+#  ======================================================
+# CORES
+bg_screen = "#0e0e0e"
+bg_frame = "#151515"
+letter = "#eaeaea"
+dest = "#ff0055"
 
-def show():
-    for i in musicas:
-        listbox.insert(END, i)
+#  ======================================================
+# APP [CONSTRUCTOR]
+class Music():
+    def showMusic(self):
+        '''
+            Mostrar as músicas ('song') em na list box.
 
-def previous_music():
-    tocando = l_rolls['text']
-    index = musicas.index(tocando)
+            Return:
+                diretorio_atual: Caminho atual do arquivo
+                arq_music: Lista das músicas na pasta 'song'
 
-    novo_index = index - 1
+                listMusic.insert: Inserindo as músicas na list box
+        '''
 
-    tocando = musicas[novo_index]
+        self.diretorio_atual = os.getcwd()
+        self.arq_music = os.listdir(rf"{self.diretorio_atual}\song")
+        
+        for music_item in self.arq_music:
+            if (".wav") in music_item:
+                # Será mostrado apenas os arquivos de áudio '.wav'
+                self.listMusic.insert('end', music_item)
+    
+    def prevMusic(self):
+        '''
+            Tocar música ANTERIOR
 
-    mixer.music.load(tocando)
-    mixer.music.play()
+            Vars:
+                playing_music: Música atual
+                index_list: Index do arquivo de música na pasta 'song'
+                new_index_list: Novo index (retonar o valor do arquivo)
+                self.arq_music[-1]: Retorna o último valor da pasta 'song'
+        '''
 
-    listbox.delete(0, END)
-    show()
-    listbox.select_set(novo_index)
-    listbox.config(selectmode=SINGLE)
-    l_rolls['text'] = tocando
+        try:
+            self.diretorio_atual = os.getcwd()
+            self.arq_music = os.listdir(rf"{self.diretorio_atual}\song")
+            
+            playing_music = self.set_music['text']
+            index_list = self.arq_music.index(playing_music)
+            new_index_list = index_list - 1
+            self.set_music['text'] = self.arq_music[new_index_list]
 
-def play_music():
-    rolls = listbox.get(ACTIVE)
-    l_rolls['text'] = rolls
-    mixer.music.load(rolls)
-    mixer.music.play()
+            mixer.music.load(rf"{self.diretorio_atual}\song\{self.set_music['text']}")
+            mixer.music.play()
 
-def next_music():
-    tocando = l_rolls['text']
-    index = musicas.index(tocando)
+        except IndexError:
+            self.diretorio_atual = os.getcwd()
+            self.arq_music = os.listdir(rf"{self.diretorio_atual}\song")
+            self.set_music['text'] = self.arq_music[-1]
 
-    novo_index = index + 1
+            mixer.music.load(rf"{self.diretorio_atual}\song\{self.set_music['text']}")
+            mixer.music.play()
 
-    tocando = musicas[novo_index]
+    def playMusic(self):
+        '''
+            Tocar a música selecionada
+        '''
+        self.set_music['text'] = self.listMusic.get(ACTIVE)
+        self.set_music['anchor'] = 'w'
+        mixer.music.load(rf"{self.diretorio_atual}\song\{self.listMusic.get(ACTIVE)}")
+        mixer.music.play()
+        
+    def nextMusic(self):
+        '''
+            Tocar música SEGUINTE
 
-    mixer.music.load(tocando)
-    mixer.music.play()
+            Vars:
+                playing_music: Música atual
+                index_list: Index do arquivo de música na pasta 'song'
+                new_index_list: Novo index (retonar o valor do arquivo)
+                self.arq_music[0]: Retorna o último valor da pasta 'song'
+        '''
 
-    listbox.delete(0, END)
-    show()
-    listbox.select_set(novo_index)
-    listbox.config(selectmode=SINGLE)
-    l_rolls['text'] = tocando
+        try:
+            self.diretorio_atual = os.getcwd()
+            self.arq_music = os.listdir(rf"{self.diretorio_atual}\song")
+            
+            playing_music = self.set_music['text']
+            index_list = self.arq_music.index(playing_music)
+            new_index_list = index_list + 1
+            self.set_music['text'] = self.arq_music[new_index_list]
 
-def pause_music():
-    mixer.music.pause()
+            mixer.music.load(rf"{self.diretorio_atual}\song\{self.set_music['text']}")
+            mixer.music.play()
 
-def resume_music():
-    mixer.music.unpause()
+        except IndexError:
+            self.diretorio_atual = os.getcwd()
+            self.arq_music = os.listdir(rf"{self.diretorio_atual}\song")
+            self.set_music['text'] = self.arq_music[0]
 
-def stop_music():
-    mixer.music.stop()
+            mixer.music.load(rf"{self.diretorio_atual}\song\{self.set_music['text']}")
+            mixer.music.play()
 
-# ----------------------------------------
-# widget
-frame_esquerda = Frame(
-    janela, width=150, height=150, bg="#111111"
-)
+class App(Music):
+    def __init__(self):
+        '''
+            Função principal para a
+            exibição da janela.
+        '''
+        self.root = Tk()
+        self.screen()
+        self.frameScreen()
+        self.labelScreen()
+        self.gadgetsFrame()
+        self.position()
+        self.showMusic()
+        # -----
+        self.root.mainloop()
 
-# ----- imagem LOGO
-img_player =  Image.open('../btn/ondas-sonoras.png')
-img_player = img_player.resize((130, 130))
-img_player = ImageTk.PhotoImage(img_player)
+    def screen(self):
+        '''
+            Configuração principal da aplicação
 
-l_logo = Label(
-    frame_esquerda, height=130, image=img_player, compound=LEFT, padx=10, anchor=NW, font=('Ivy 16 bold'), bg="#111111", fg="#111111"
-)
-# ----- imagem LOGO
+            Return:
+                title: Título da aplicação
 
-# ----- frame direita
-frame_direita = Frame(
-    janela, width=250, height=150, bg="#111111"
-)
+                geometry: Dimensão da janela (width x height)
 
-listbox = Listbox(
-    frame_direita, selectmode=SINGLE, width=22, height=10,
-    font=('Arial 9 bold'), bg="#111111", fg="#dedcdc"
-)
+                resizable: Ajustar tamanho da página (opção negada)
 
+                configure [background]: Cor de fundo
 
-scroll = Scrollbar(frame_direita)
-# ----- frame direita
+                iconbitmap: Ícone da janela
+        '''
+        self.root.title("Music Player 2.0")
+        self.root.geometry("450x300")
+        self.root.resizable(width='false', height='false')
+        self.root.configure(background=bg_screen)
+        self.root.iconbitmap('img/music_dk_icon_128980.ico')
+    
+    def frameScreen(self):
+        '''
+            Frames da aplicação
 
-# ----- frame baixo
-frame_baixo = Frame(
-    janela, width=404, height=100, bg="#111111"
-)
+            Return:
+                frame_TopLeft: Icon de música\n
+                frame_BotLeft: Botões de ação\n
+                frame_Right: Lista de músicas [pasta: 'song']
+        '''
+        self.frame_TopLeft = Frame(self.root, bg=bg_frame)
+        self.frame_BotLeft = Frame(self.root, bg=bg_screen)
+        self.frame_Right = Frame(self.root, bg=bg_screen)
 
-l_rolls = Label(
-    frame_baixo, text="Escolha uma música na lista", width=44, justify=LEFT, anchor=NW,
-    font=('Ivy 10'), bg="#dedcdc", fg="#111111"
-)
+    def labelScreen(self):
+        '''
+            Labels da aplicação
 
-img_previous = Image.open('../btn/button-previous.png')
-img_previous = img_previous.resize((30, 30))
-img_previous = ImageTk.PhotoImage(img_previous)
-b_previous = Button(
-    frame_baixo, command=previous_music, width=40, height=40, justify=LEFT,
-    font=('Ivy 10 bold'), image=img_previous, bg="#111111", relief=RAISED, overrelief=RIDGE
-)
+                set_image: Label da imagem mixer.
+                set_music: Label onde será mostrada a música que está tocando.
+        '''
+        self.image_Label = Image.open('img/mixer-de-dj.png')
+        self.image_Label = self.image_Label.resize((134, 134))
+        self.image_Label = ImageTk.PhotoImage(self.image_Label)
+        self.set_image = Label(
+            self.frame_TopLeft, bg=bg_screen, image= self.image_Label
+        )
 
-img_play = Image.open('../btn/button-play.png')
-img_play = img_play.resize((30, 30))
-img_play = ImageTk.PhotoImage(img_play)
-b_play = Button(
-    frame_baixo, width=40, command=play_music, height=40, justify=LEFT,
-    font=('Ivy 10 bold'), image=img_play, bg="#111111", relief=RAISED, overrelief=RIDGE
-)
+        self.set_music = Label(
+            self.frame_BotLeft, font=('Ivy 10 italic'), bg="#dedcdc", fg="#111111",
+            text="Escolha uma música...", anchor='c'
+        )
 
-img_next = Image.open('../btn/button-next.png')
-img_next = img_next.resize((30, 30))
-img_next = ImageTk.PhotoImage(img_next)
-b_next = Button(
-    frame_baixo, command=next_music, width=40, height=40, justify=LEFT,
-    font=('Ivy 10 bold'), image=img_next, bg="#111111", relief=RAISED, overrelief=RIDGE
-)
+    def gadgetsFrame(self):
+        '''
+            Gadgets para aplicar as funções.
 
-img_pause = Image.open('../btn/button-pause.png')
-img_pause = img_pause.resize((30, 30))
-img_pause = ImageTk.PhotoImage(img_pause)
-b_pause = Button(
-    frame_baixo, command=pause_music, width=40, height=40, justify=LEFT,
-    font=('Ivy 10 bold'), image=img_pause, bg="#111111", relief=RAISED, overrelief=RIDGE
-)
+            Return:
+                listMusic: Lista para armazenar as músicas da pasta 'song'
+                scrollBar: Scroll unificada à list box de músicas.
+                \n
+                bottom_Prev: Botão Previous
+                bottom_Play: Botão Play
+                bottom_Next: Botão Next
+                    |\n
+                    |\n
+                    [---> Todos para música
+        '''
+        self.listMusic = Listbox(self.frame_Right, font=('Arial 8 bold'))
+        self.scrollBar = Scrollbar(self.frame_Right)
 
-img_resume = Image.open('../btn/button-resume.png')
-img_resume = img_resume.resize((30, 30))
-img_resume = ImageTk.PhotoImage(img_resume)
-b_resume = Button(
-    frame_baixo, command=resume_music, width=40, height=40, justify=LEFT,
-    font=('Ivy 10 bold'), image=img_resume, bg="#111111", relief=RAISED, overrelief=RIDGE
-)
+        self.image_Prev = Image.open('img/prev.png')
+        self.image_Prev = self.image_Prev.resize((34, 34))
+        self.image_Prev = ImageTk.PhotoImage(self.image_Prev)
+        self.bottom_Prev = Button(
+            self.frame_BotLeft, image=self.image_Prev, bd=0,
+            bg=bg_screen
+        )
+        self.bottom_Prev['command'] = self.prevMusic
 
-img_stop = Image.open('../btn/button-stop.png')
-img_stop = img_stop.resize((30, 30))
-img_stop = ImageTk.PhotoImage(img_stop)
-b_stop = Button(
-    frame_baixo, command=stop_music, width=40, height=40, justify=LEFT,
-    font=('Ivy 10 bold'), image=img_stop, bg="#111111", relief=RAISED, overrelief=RIDGE
-)
-# ----------------------------------------
-# painel
-frame_esquerda.grid(row=0, column=0, pady=1, padx=0, sticky=NSEW)
-l_logo.place(x=24, y=15)
+        self.image_Play = Image.open('img/play.png')
+        self.image_Play = self.image_Play.resize((34, 34))
+        self.image_Play = ImageTk.PhotoImage(self.image_Play)
+        self.bottom_Play = Button(
+            self.frame_BotLeft, image=self.image_Play, bd=0,
+            bg=bg_screen
+        )
+        self.bottom_Play['command'] = self.playMusic
 
-# ----- frame direita
-frame_direita.grid(row=0, column=1, pady=1, padx=0, sticky=NSEW)
+        self.image_Next = Image.open('img/next.png')
+        self.image_Next = self.image_Next.resize((34, 34))
+        self.image_Next = ImageTk.PhotoImage(self.image_Next)
+        self.bottom_Next = Button(
+            self.frame_BotLeft, image=self.image_Next, bd=0,
+            bg=bg_screen
+        )
+        self.bottom_Next['command'] = self.nextMusic
 
-listbox.grid(row=0, column=0)
-listbox.config(yscrollcommand=scroll.set)
+    def position(self):
+        '''
+            Posições dos gadgets da aplicação.
+        '''
+        # def [frameScreen]
+        self.frame_TopLeft.place(relx=0, rely=0, relwidth=0.45, relheight=0.5)
+        self.frame_BotLeft.place(relx=0, rely=0.5, relwidth=0.45, relheight=0.5)
+        self.frame_Right.place(relx=0.45, rely=0, relwidth=0.55, relheight=1)
 
-scroll.grid(row=0, column=1, sticky=NSEW)
-scroll.config(command=listbox.yview)
-# ----- frame direita
+        # def [labelScreen]
+        self.set_image.place(relwidth=1, relheight=1)
+        self.set_music.place(relx=0, rely=0.8, relwidth=1, relheight=0.13)
 
-# ----- frame baixo
-frame_baixo.grid(row=1, column=0, columnspan=3,pady=1, padx=0, sticky=NSEW)
-l_rolls.place(x=0, y=1)
+        # def [gadgetsFrame]
+        self.listMusic.place(relx=0, rely=0, relwidth=0.9, relheight=1)
+        self.scrollBar.place(relx=0.9, rely=0, relwidth=0.1, relheight=1)
+        self.bottom_Prev.place(relx=0.01, rely=0.25, relwidth=0.33, relheight=0.45)
+        self.bottom_Play.place(relx=0.34, rely=0.25, relwidth=0.33, relheight=0.45)
+        self.bottom_Next.place(relx=0.66, rely=0.25, relwidth=0.33, relheight=0.45)
+        
+#  ======================================================
+# APP [ativação]
+try:
+    if __name__ == '__main__':
+        mixer.init()
+        App()
+    letSet = "\033[47m  \033[m"
+    statusSucess = "\033[46m Ativação feita com sucesso! \033[m" #Cyan Background
+    newSetSucess = f"\033[1m{statusSucess}\033[m"
+    print(f"{letSet}{newSetSucess}")
+        
 
-# ----- Botões (espaçamento: x=44)
-b_previous.place(x=38, y=35)
-b_play.place(x=82, y=35)
-b_next.place(x=126, y=35)
-b_pause.place(x=170, y=35)
-b_resume.place(x=214, y=35)
-b_stop.place(x=258, y=35)
-# ----- Botões (espaçamento: x=44)
+except AttributeError as e:
+    letSet = "\033[47m [ERROR] \033[m"
+    statusError = f"\033[41m {e} \033[m" #Red Background
+    newSetError = f"\033[1m{statusError}\033[m"
+    print(f"{letSet}{newSetError}")
 
-# ----- frame baixo
-
-show()
-mixer.init()
-janela.mainloop()
+    messagebox.showerror(
+        title='[ERROR] - Ativação',
+        message=f'{e}'
+    )
