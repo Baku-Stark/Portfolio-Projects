@@ -32,6 +32,9 @@ div.container-landing{
             .title-layer{
                 font-size: 5.5em;
                 text-shadow: 3px 3px 10px #11111179;
+                @include screen480px{
+                    font-size: 3.3em;
+                }
             }
         }
         .text-layer{

@@ -47,6 +47,9 @@ nav.navbar{
             &:nth-child(1){
                 margin-left: 0;
             }
+            @include screen480px{
+                font-size: 1.5em;
+            }
             a{
                 color: $text-color;
                 font-family: 'Impact';

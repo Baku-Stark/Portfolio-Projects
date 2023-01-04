@@ -1,4 +1,9 @@
-@import '_variables.scss', '_navbar.scss', '_landing.scss', '_section-01.scss';
+@import '_variables.scss', 
+        '_navbar.scss', 
+        '_landing.scss', 
+        '_section-01.scss', 
+        '_section-02.scss',
+        '_footer.scss';
 
 :root{
     --body-color: #E4E9F7;
@@ -7,6 +12,7 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #111111;
+    --borderCard : #111111ad;
 }
 
 .darkmode{
@@ -16,6 +22,7 @@
     --primary-color-light: #3A383C;
     --toggle-color: #f0f8ff;
     --text-color: #E4E9F7;
+    --borderCard: #E4E9F7ad;
     transition: $tran-03;
 }
 

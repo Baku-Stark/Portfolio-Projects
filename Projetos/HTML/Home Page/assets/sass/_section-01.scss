@@ -12,3 +12,99 @@ div.configure-box{
         opacity: 0.7;
     }
 }
+
+div.card{
+    background-color: var(--primary-color-light);
+    img{
+        width: 100%;
+        height: 200px;
+        border-bottom: 1px solid var(--text-color);
+    }
+}
+
+h5.card-title{
+    opacity: .7;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.card.mt-4.h-100{
+    border: 1px solid var(--borderCard);
+    background-color: var(--body-color);
+}
+
+article.block-content{
+    height: 100%;
+    margin-bottom: 20px;
+    border-top: 4px solid var(--text-color);
+    border-bottom: 4px solid var(--text-color);
+    @include screen770px{
+        border-bottom: 0 solid var(--text-color);
+    }
+    h3.block-title{
+        font-size: 1em;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: var(--text-color);
+    }
+    p{
+        font-size: .8em;
+        opacity: .6;
+        color: var(--text-color);
+    }
+}
+
+div.carousel-caption{
+    top: 50%;
+    @include screen999px{
+        top: 20%;
+    }
+    h5{
+        font-size: 2em;
+        font-weight: bold;
+        color: #f00;
+        text-shadow: 1px 1px 0 #000000;
+        @include screen999px{
+            font-size: 1em;
+        }
+    }
+    p{
+        font-size: 1em;
+        color: #E4E9F7ad;
+        text-shadow: 1px 1px 0 #000000;
+        @include screen999px{
+            font-size: .8em;
+        }
+    }
+}
+
+.carousel-indicators [data-bs-target]{
+    background-color: #f00;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    background: #3a3a3a00;
+}
+
+div.table-content{
+    display: none;
+    @media screen and (max-width: 767px){
+        display: block;
+    }
+    table{
+        border-collapse: collapse;
+        tr{
+            .title-td{
+                font-weight: bold;
+                color: var(--primary-color);
+                background-color: var(--primary-color-light);
+            }
+           td{
+            padding: 5px 10px;
+            color: var(--text-color);
+            border: 1px solid var(--borderCard);
+           }
+        }
+    }
+}
