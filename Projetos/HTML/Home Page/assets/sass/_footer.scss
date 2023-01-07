@@ -1,0 +1,80 @@
+footer{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0c0c0c;
+    h5.footer-title{
+        margin-bottom: 0;
+        color: #f0f8ff;
+        font-family: 'Nasalization';
+    }
+    div.content-footer-top{
+        @include displayPattern;
+        @include screen770px{
+            @include displayCustom-2(column, center);
+        }
+        div.content-footer-top-dir{
+            @include displayPattern;
+            div.line-divider{
+                width: 2px;
+                height: 50px;
+                margin: 0 20px 0 20px;
+                background-color: #f0f8ff79;
+            }
+        }
+        div.content-footer-top-esq{
+            text-align: center;
+            @include screen770px{
+                margin-top: 20px;
+            }
+            aside.social-media{
+                margin-top: 20px;
+                i.bi.bi-facebook{
+                    margin-left: 0;
+                }
+                i.bi{
+                    font-size: 1.3em;
+                    margin-left: 5px;
+                    color: $text-color;
+                    &:hover{
+                        color: #8b0000;
+                    }
+                }
+            }
+        }
+    }
+    hr{color: #f0f8ff79;}
+    div.content-footer-mid{
+        @include displayPattern;
+        @include screen770px{
+            @include displayCustom-2(column, center);
+        }
+        div.col-md-4{
+            height: 100%;
+            display: grid;
+            justify-content: center;
+            @include screen770px{
+                width: 50%;
+                margin-top: 20px;
+                display: block;
+            }
+            ul > li > a{
+                opacity: .7;
+                color: #707070;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    div.content-footer-bot{
+        text-align: center;
+        p{
+            font-size: 1em;
+            color: #f0f8ff;
+            @include screen480px{
+                font-size: 0.7em;
+            }
+        }
+        a{color: #8b0000; font-weight: bold;}
+    }
+}

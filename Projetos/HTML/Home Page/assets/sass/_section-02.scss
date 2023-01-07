@@ -4,21 +4,20 @@ div.block-img-section img{
 
 div.cards-content{
     @include displayPattern;
-    @include screen770px{
-        @include displayCustom-2(column, center)
-    }
     .col{
         @include displayPattern;
-        div.card{
-            width: 18rem;
+        div.card.configure-gtr{
+            width: 100%;
             .card-header{
                 font-weight: bold;
                 font-family: 'Nasalization';
             }
             div.card-body{
+                background-color: var(--toggle-color);
                 h5.card-title{
                     font-size: 1em;
-                    color: #111111ab;
+                    opacity: .6;
+                    color: #3A383C;
                     @include screen480px{
                         font-size: .9em;
                     }

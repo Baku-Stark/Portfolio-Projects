@@ -2,7 +2,7 @@ nav.navbar{
     width: 100%;
     z-index: 10;
     position: fixed;
-    background-color: $body-color;
+    background-color: #0c0c0c;
     @include displayCustom(space-around);
     div.title-box-navbar{
         @include displayPattern;
