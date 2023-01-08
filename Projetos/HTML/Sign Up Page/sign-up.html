@@ -4,77 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS [Bootstrap] -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Icons [Bootstrap] -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    
+    <!-- Logo Nissan Icon -->
+    <link rel="shortcut icon" href="assets/image/nissan-logo.jfif">
+    <!-- CSS [MAIN] -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Sign Up Account | NISSAN</title>
-    <link rel="stylesheet" href="/css/sign-up.css">
-    <link rel="stylesheet" href="/css/media2.css">
-    <link rel="shortcut icon" href="/_spimagens/nissan-logo.jfif">
 </head>
-
 <body>
-    <header>
-        <div id="title">
-            <h1>NISSAN</h1>
-            <h1>Nissan GT-R</h1>
-        </div>
-
-        <ul>
-            <a href="home-index.html"><li>Início</li></a>
-            <a href="#"><li>Sobre</li></a>
-            <a href="#"><li>Contato</li></a>
-            <a href="lindex_lading.html" id="Login"><li>Login</li></a>
-        </ul>
-    </header>
-
     <main>
-        <article>
-            <h2>Criar Uma Conta</h2>
-            <div class="alternative">
-                <span>OR</span>
+        <article class="form-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a href="../Home Page/index.html">
+                            <img
+                                src="assets/image/nissan-logo.jfif"
+                                alt="Logo Nissan"
+                                class="logo-nissan mb-4"
+                            />
+                        </a>
+                        <h5>Crie uma conta</h5>
+                        <div class="col-md-6">
+                            <i class="bi bi-google"></i>
+                            <i class="bi bi-linkedin"></i>
+                            <i class="bi bi-facebook"></i>
+                        </div>
+                    </div>
+                    <hr class="mb-4 mt-4">
+                    <form>
+                        <label for="user">
+                            Nome de usuário <abbr title="Escolha o seu nome de usuário.">*</abbr> 
+                        </label>
+                        <input type="text" id="user">
+        
+                        <label for="password">
+                            Senha <abbr title="A senha deve possui números, caracteres comuns e caracteres especiais (#, $, %, etc).">*</abbr> 
+                        </label>
+                        <input type="password" id="password">
+                        <label for="password-repeat">
+                            Confirmar Senha <abbr title="Reescreva sua senha.">*</abbr> 
+                        </label>
+                        <input type="password" id="password-repeat">
+
+                        <label for="email">
+                            E-mail <abbr title="Selecione um e-mail para contato">*</abbr> 
+                        </label>
+                        <input type="email" id="email">
+                        <button>Registrar</button>
+                        <p>
+                            By creating an account you agree to our <a href="#">Term & Privacy</a>.
+                        </p>
+                    </form>
+                </div>
             </div>
-            <div class="social-media">
-                <a href="#">
-                    <img src="/_spimagens/google.png" alt="google">
-                </a>
-
-                <a href="#">
-                    <img src="/_spimagens/facebook.png" alt="facebook">
-                </a>
-
-                <a href="#">
-                    <img src="/_spimagens/linkedin.png" alt="linkedin">
-                </a>
-            </div>
-            
-            <form>
-                <label for="user">
-                    <span>Nome de usuário</span>
-                    <input type="text">
-                </label>
-
-                <label for="email">
-                    <span>E-mail</span>
-                    <input type="email">
-                </label>
-
-                <label for="password">
-                    <span>Senha</span>
-                    <input type="password">
-                </label>
-
-                <label for="password">
-                    <span>Confirme a senha</span>
-                    <input type="password">
-                </label>
-
-                <input type="submit" value="Sign Up">
-            </form>
         </article>
-        <aside>
-            <div>
-                <img src="/_spimagens/sp-nissan-gtr.jfif" alt="Carro-GT-R" id="gtr">
-            </div>
+        <aside class="image-fluid-content">
+            <img
+                src="assets/image/sp-nissan-gtr.jfif" alt="carro"
+                class="painel-nissan"
+            />
         </aside>
     </main>
-
 </body>
 </html>
