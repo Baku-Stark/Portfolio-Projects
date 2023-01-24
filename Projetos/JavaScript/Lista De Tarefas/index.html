@@ -4,32 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista De Tarefas</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="shortcut icon" href="/_Listimagens/bloco-de-anotacoes.png">
+    <!-- Bootstrap [ICONS] -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- CSS [**main] -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="assets/image/note.ico" type="image/x-icon">
+    <title>Lista de Tarefas | Javascript</title>
 </head>
-
 <body>
-    <div class="container">
-        <div class="new-task-container">
-            <input 
-                type="text" 
-                class="new-task-input" 
-                placeholder="Tarefas para serem feitas."
-            />
-            <button class="new-task-button">Adicionar</button>
+    <div class="block-content-todo">
+        <div class="thead-content-header">
+            <div class="title">
+                <h2>Lista de Tarefas</h2>
+                <div class="icons-content">
+                    <a href="#">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <div class="tasks-container"></div>
+        <div class="tbody-content-form">
+            <div class="block-form">
+                <form>
+                    <fieldset>
+                        <legend>Criar Anotação</legend>
+                        <div class="block-inputs">
+                            <textarea name="conteudo" id="i_conteudo" cols="30" rows="10" placeholder="Esperando sua anotação..." maxlength="100" required></textarea>
+                        </div>
+                        <div class="block-inputs">
+                            <label for="i_qtd">Quantidade:</label>
+                            <input type="number" name="quantidade" id="i_qtd" min="0" value="0" required>
+                        </div>
+                        <div class="block-inputs">
+                            <label for="i_taskID">Tarefa(ID):</label>
+                            <input type="text" name="quantidade" id="i_taskID"placeholder="Compras, Arrumar, etc..." required>
+                        </div>
+                        <div class="block-inputs">
+                            <button class="main_btn">Fazer anotação</button>
+                            <input type="reset" value="Limpar campos">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="block-notes">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Mensagem</th>
+                            <th>Quantidade</th>
+                            <th>----</th>
+                        </tr>
+                    </thead>
+                    <tbody class="body-table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-
-    <!--JAVASCRIPT-->
-    <script 
-        src="https://kit.fontawesome.com/aeaa5c959f.js" 
-        crossorigin="anonymous"
-    ></script>
-    <script src="/js/main.js"></script>
-
+    <!-- Javascript[**main] -->
+    <script src="assets/js/script.js"></script>
 </body>
-
 </html>

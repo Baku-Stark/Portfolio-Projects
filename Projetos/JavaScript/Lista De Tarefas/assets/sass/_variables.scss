@@ -1,0 +1,33 @@
+$primary-dark-bg: #1f1e1e;
+$primary-dark: #111111;
+$color-dark-light: #27282f;
+$color-gray-light: #86848c;
+$color-gray-dark: #56555e;
+
+$color-light: #f0eff5;
+
+$border-radius-1: 1rem;
+$border-radius-2: 6px;
+$card-border-radius: 1.6rem;
+
+
+$tran-03: .3s ease-in-out;
+
+
+@mixin displayPattern($args_1, $args_2){
+    display: flex;
+    align-items: $args_1;
+    justify-content: $args_2;
+}
+
+@mixin portrait{
+    @media (orientation: portrait){
+        @content;
+    }
+}
+
+@mixin landscape{
+    @media (orientation: landscape){
+        @content;
+    }
+}

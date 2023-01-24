@@ -1,0 +1,202 @@
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    max-width: 100vw;
+    padding: 12px 10px;
+    background-color: $primary-dark-bg;
+    @include displayPattern(center, center);
+
+    div.block-content-todo{
+        width: 500px;
+        border-radius: $border-radius-1;
+        background-color: $color-dark-light;
+
+        div.thead-content-header{
+            width: 100%;
+            border-radius: $border-radius-1 $border-radius-1 0 0;
+            background-color: $primary-dark;
+
+            div.title{
+                padding: 10px;
+                text-align: center;
+                color: $color-light;
+
+                div.icons-content{
+                    gap: 2rem;
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: center;
+                    
+                    a{
+                        font-size: 1.2rem;
+                        transition: $tran-03;
+                        color: $color-light;
+                        &:hover{
+                            transition: $tran-03;
+                            color: $color-gray-dark;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.tbody-content-form{
+            width: 100%;
+            background-color: $color-gray-light;
+
+            // CONFIGURE [form] ======================================================
+            div.block-form{
+                padding: 5px 10px;
+
+                form{
+                    
+                    fieldset{
+                        padding: 5px 10px;
+
+                        legend{
+                            font-weight: bold;
+                        }
+
+                        div.block-inputs{
+                            padding: 5px 10px;
+
+                            label{
+                                font-weight: 500;
+                            }
+    
+                            input{
+                                padding: 6px;
+                                border: none;
+                                border-radius: $card-border-radius;
+                                background-color: $color-gray-dark;
+                            }
+
+                            input[type="number"]{
+                                font-weight: bold;
+                            }
+
+                            input[type="text"]{
+                                font-weight: bold;
+                                &::selection{
+                                    opacity: 
+                                    .7s;
+                                    color: $color-light;
+                                    background-color: $primary-dark;
+                                }
+
+                                &::placeholder{
+                                    color: #faebd77a;
+                                }
+                            }
+
+                            textarea{
+                                max-width: 435px;
+                                max-height: 235px;
+                                min-width: 300px;
+                                min-height: 100px;
+                                width: 100%;
+                                height: 100%;
+                                padding: 15px;
+                                border: none;
+                                font-weight: bold;
+                                border-radius: $card-border-radius;
+                                background-color: $color-gray-dark;
+
+                                @include portrait{
+                                    max-width: 335px;
+                                    max-height: 135px;
+                                    min-width: 205px;
+                                    min-height: 100px;
+                                    width: 100px;
+                                    height: 100px;
+                                }
+
+                                &::selection{
+                                    opacity: 
+                                    .7;
+                                    color: $color-light;
+                                    background-color: $primary-dark;
+                                }
+
+                                &::placeholder{
+                                    color: #faebd77a;
+                                }
+                            }
+
+                            button.main_btn{
+                                cursor: pointer;
+                                padding: 5px 10px;
+                                border-radius: $card-border-radius;
+                                font-size: 0.8rem;
+                                font-weight: bold;
+                                border: 2px solid $primary-dark;
+                                transition: $tran-03;
+                                background-color: $color-gray-dark;
+                                &:hover{
+                                    transition: $tran-03;
+                                    border: 2px solid $color-gray-light;
+                                    color: $color-light;
+                                    background-color: $primary-dark;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // CONFIGURE [table] ======================================================
+            div.block-notes{
+                width: 100%;
+                background-color: $primary-dark;
+                @include displayPattern(center, center);
+
+                table{
+                    width: 90%;
+                    margin: 20px 0;
+                    border-collapse: collapse;
+                    td, th{
+                        padding: 10px;
+                        color: $color-light;
+                        border: 2px solid $primary-dark-bg;
+                    }
+
+                    tr{
+                        text-align: center;
+
+                        td{
+                            opacity: .5;
+                            &:nth-child(1){
+                                font-weight: bold;
+                                color: #ff0000;
+                            }
+                        }
+    
+                        td > button{
+                            opacity: .5;
+                            padding: 5px;
+                            cursor: pointer;
+                        }
+    
+                        td:hover > button{
+                            opacity: 1;
+                        }
+
+                        &:nth-child(2n){
+                            color: $primary-dark;
+                            background-color: $color-dark-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
