@@ -11,24 +11,25 @@ from rich import print as rprint
 import customtkinter
 
 # IMPORT [functions > *]
-from functions.system import LoginRegister
+from functions.system import MainForm
+#from functions.manage import Manage
 
-class MainApp(LoginRegister):
+class MainApp(MainForm):
     def __init__(self):
         # self.color_title = (ligth-mode, dark-mode)
         self.color_title = ("#0E2F73", "#00C8FA")
         self.color_letter = ("#111111", "#f0f8ff")
-
+        self.themePattern = ("#CFCFCF", "#333333")
         self.color_success = "#22ca4b"
         self.color_warning = "#ff4336"
 
-        self.connection = lite.connect('database/form.db')
+        self.connection = lite.connect('database/accounts.db')
 
         try:
             cur = self.connection.cursor()
             cur.execute(
                 """
-                CREATE TABLE IF NOT EXISTS formulario(
+                CREATE TABLE IF NOT EXISTS accounts(
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     user TEXT,
                     password TEXT,
@@ -38,12 +39,12 @@ class MainApp(LoginRegister):
             )
 
             status_title = "[VALID]"
-            status_message = "[green]SQLite 3[/green] Formulário (formulario) criado com sucesso!"
+            status_message = "[green]SQLite 3[/green] Banco de Dados (accounts) criado com sucesso!"
             rprint(f'[on white] [black] {status_title} [/black] [/on white][on blue] [bold]{status_message}[/bold] [/on blue]')
         
-        except (Exception, AttributeError):
+        except (Exception, AttributeError) as e:
             status_title = "[ERROR]"
-            status_message = f"[orange]SQLite 3[/orange] {Exception}"
+            status_message = f"[orange]SQLite 3[/orange] {e}"
             rprint(f'[on white] [black] {status_title} [/black] [/on white][on red] [bold]{status_message}[/bold] [/on red]')
 
         self.theme = "Light"
@@ -53,8 +54,8 @@ class MainApp(LoginRegister):
         self.theme_function()
 
         # Class [LOGIN REGISTER]
-        self.framesMAIN()
-        self.form_widgets()
+        self.framesForm()
+        self.loginForm()
 
         # start app
         self.root.mainloop()
@@ -78,7 +79,8 @@ class MainApp(LoginRegister):
 
     def theme_widgets(self):
         self.theme_btn = customtkinter.CTkButton(
-            self.root, text="Light Mode", font=('Impact', 15)
+            self.root, text="Light Mode", font=('Impact', 15), text_color=("#111111", "#f0f8ff"),
+            fg_color=("#ABABAB", "#111111"), hover_color=("#D9D9D9", "#000000")
         )
         self.theme_btn.configure(command=self.theme_function)
 
