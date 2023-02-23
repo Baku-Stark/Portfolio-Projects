@@ -9,10 +9,10 @@ from PIL import Image
 import customtkinter
 from tkinter import messagebox, CENTER
 
-def GlobalUser(user:str):
-    return user
+# IMPORT [functions > *]
+from functions.manage import Manage
 
-class systemLOGIN():
+class systemLOGIN(Manage):
     def login(self):
         self.user = self.entry_username.get()
         self.password = self.entry_password.get()
@@ -49,11 +49,16 @@ class systemLOGIN():
                     self.label_password.configure(text="Senha incorreta*", text_color=self.color_warning)
 
             
-            GlobalUser(self.user)
+        self.GlobalUser = self.user
 
-            self.entry_username.delete(0, 'end')
-            self.entry_password.delete(0, 'end')
-            self.frameCENTER.destroy()
+        self.entry_username.delete(0, 'end')
+        self.entry_password.delete(0, 'end')
+        self.frameCENTER.destroy()
+
+        # Class [MANAGE]
+        self.MenuManage()
+        self.frameManage()
+
 
     def readUSER_DB(self):
         with connection:
@@ -101,6 +106,7 @@ class systemLOGIN():
         connection.close()    
 
 class MainForm(systemLOGIN):
+
     def framesForm(self):
         self.frameCENTER = customtkinter.CTkFrame(self.root)
 

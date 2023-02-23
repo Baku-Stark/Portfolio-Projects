@@ -12,7 +12,7 @@ import customtkinter
 
 # IMPORT [functions > *]
 from functions.system import MainForm
-#from functions.manage import Manage
+from functions.manage import Manage
 
 class MainApp(MainForm):
     def __init__(self):
@@ -20,6 +20,7 @@ class MainApp(MainForm):
         self.color_title = ("#0E2F73", "#00C8FA")
         self.color_letter = ("#111111", "#f0f8ff")
         self.themePattern = ("#CFCFCF", "#333333")
+        self.themePattern2 = ("#86848c", "#111111")
         self.color_success = "#22ca4b"
         self.color_warning = "#ff4336"
 
@@ -39,7 +40,7 @@ class MainApp(MainForm):
             )
 
             status_title = "[VALID]"
-            status_message = "[green]SQLite 3[/green] Banco de Dados (accounts) criado com sucesso!"
+            status_message = "[bold green]SQLite 3[/bold green] Banco de Dados (accounts) criado com sucesso!"
             rprint(f'[on white] [black] {status_title} [/black] [/on white][on blue] [bold]{status_message}[/bold] [/on blue]')
         
         except (Exception, AttributeError) as e:
@@ -57,11 +58,15 @@ class MainApp(MainForm):
         self.framesForm()
         self.loginForm()
 
+        # Class [Manage]
+        # self.frameManage()
+        # self.MenuManage()
+
         # start app
         self.root.mainloop()
 
     def windowApp(self):
-        self.root.title("Sistema de Login")
+        self.root.title("LOGIN | REGISTRO")
         self.root.geometry("1200x650")
         self.root.iconbitmap('img/ciberespaco.ico')
         self.root.resizable(width='false', height='false')
@@ -87,11 +92,12 @@ class MainApp(MainForm):
         self.theme_btn.place(relx=0.01, rely=0.01)
 
 
+
 if __name__ == '__main__':
     os.system('cls')
 
     status_title = "[ON-MODE]"
-    status_message = "[green]CustomTkinter[/green] application successfully created!"
+    status_message = "[bold green]CustomTkinter[/bold green] application successfully created!"
     rprint(f'[on white] [black] {status_title} [/black] [/on white][on blue] [bold]{status_message}[/bold] [/on blue]')
 
     MainApp()
