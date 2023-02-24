@@ -14,8 +14,8 @@ from functions.manage import Manage
 
 class systemLOGIN(Manage):
     def login(self):
-        self.user = self.entry_username.get()
-        self.password = self.entry_password.get()
+        self.user = self.entry_username.get().strip()
+        self.password = self.entry_password.get().strip()
 
         if self.user == "" and self.password == "":
             messagebox.showerror(
@@ -49,15 +49,19 @@ class systemLOGIN(Manage):
                     self.label_password.configure(text="Senha incorreta*", text_color=self.color_warning)
 
             
-        self.GlobalUser = self.user
+            self.GlobalUser = self.user
 
-        self.entry_username.delete(0, 'end')
-        self.entry_password.delete(0, 'end')
-        self.frameCENTER.destroy()
+            self.entry_username.delete(0, 'end')
+            self.entry_password.delete(0, 'end')
+            self.frameCENTER.destroy()
 
-        # Class [MANAGE]
-        self.MenuManage()
-        self.frameManage()
+            # Class [MANAGE]
+            self.MenuManage()
+            self.frameManage()
+            self.widgets_frameLEFT_MANAGE()
+            self.countStatus()
+            self.showGraph()
+            self.readMANAGECRUD()
 
 
     def readUSER_DB(self):
@@ -71,10 +75,10 @@ class systemLOGIN(Manage):
 
     def createUSER(self):
         with connection:
-            regUSER = self.entry_regUsername.get()
-            regPASS = self.entry_regPassword.get()
-            regPASSCONFIRM = self.entry_regPasswordCONFIRM.get()
-            regEMAIL = self.entry_regEmail.get()
+            regUSER = self.entry_regUsername.get().strip()
+            regPASS = self.entry_regPassword.get().strip()
+            regPASSCONFIRM = self.entry_regPasswordCONFIRM.get().strip()
+            regEMAIL = self.entry_regEmail.get().strip()
 
             if regUSER == "":
                 self.label_rules1.configure(text_color=self.color_warning)
@@ -103,10 +107,9 @@ class systemLOGIN(Manage):
                 except Exception as e:
                     print(e)
 
-        connection.close()    
+        connection.close()
 
 class MainForm(systemLOGIN):
-
     def framesForm(self):
         self.frameCENTER = customtkinter.CTkFrame(self.root)
 

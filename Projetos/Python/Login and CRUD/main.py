@@ -12,7 +12,6 @@ import customtkinter
 
 # IMPORT [functions > *]
 from functions.system import MainForm
-from functions.manage import Manage
 
 class MainApp(MainForm):
     def __init__(self):
@@ -21,8 +20,10 @@ class MainApp(MainForm):
         self.color_letter = ("#111111", "#f0f8ff")
         self.themePattern = ("#CFCFCF", "#333333")
         self.themePattern2 = ("#86848c", "#111111")
+        self.hover_btn = ("#C8C8C8", "#292929")
         self.color_success = "#22ca4b"
         self.color_warning = "#ff4336"
+        self.color_waiting = "#FCDC23"
 
         self.connection = lite.connect('database/accounts.db')
 
@@ -57,10 +58,6 @@ class MainApp(MainForm):
         # Class [LOGIN REGISTER]
         self.framesForm()
         self.loginForm()
-
-        # Class [Manage]
-        # self.frameManage()
-        # self.MenuManage()
 
         # start app
         self.root.mainloop()
