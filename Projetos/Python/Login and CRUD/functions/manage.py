@@ -59,9 +59,6 @@ class ManageGRAPH():
         tasks_status = ["Em Andamento", "Finalizadas"]
         bar_labels = ['red', 'blue']
         bar_colors = ['tab:red', 'tab:blue']
-        
-        x_pos = 0
-        y_pos = np.arange(len(tasks_status))
 
         self.ax.bar(tasks_status, count_tasks, label=bar_labels, color=bar_colors)
         self.ax.set_title(f'Gráfico do(a) {self.GlobalUser}')
@@ -115,6 +112,8 @@ class ManageCRUD(ManageGRAPH):
             for value in lista:
                 self.listTreeView.insert('', 'end', values=value)
 
+            self.showGraph()
+
     def createCRUD(self):
         connection = lite.connect(rf"database_content/{self.GlobalUser}.db")
         with connection:
@@ -150,13 +149,74 @@ class ManageCRUD(ManageGRAPH):
                 self.readMANAGECRUD()
     
     def updateCRUD(self):
-        print('Atualizou')
         connection = lite.connect(rf"database_content/{self.GlobalUser}.db")
+
+        with connection:
+            try:
+                list_data = self.listTreeView.focus()
+                list_dic = self.listTreeView.item(list_data)
+                list_set = list_dic['values']
+
+                self.task_id = list_set[0]
+                self.task_status = list_set[2]
+
+                cur = connection.cursor()
+
+                if self.task_status[2] == "EM ANDAMENTO":
+                    new_status = "FINALIZADA"
+                    command = f'UPDATE tasks SET status="{new_status}" WHERE id={self.task_id}'
+
+                else:
+                    new_status = "EM ANDAMENTO"
+                    command = f'UPDATE tasks SET status="{new_status}" WHERE id={self.task_id}'
+                
+                cur.execute(command)
+
+            except IndexError:
+                messagebox.showerror(
+                    title="Erro",
+                    message="Selecione a tarefa na tabela!"
+                )
+        
+        connection.commit()
+        self.readMANAGECRUD()
 
     def deleteCRUD(self):
-        print('Apagou')
         connection = lite.connect(rf"database_content/{self.GlobalUser}.db")
 
+        with connection:
+            try:
+                list_data = self.listTreeView.focus()
+                list_dic = self.listTreeView.item(list_data)
+                list_set = list_dic['values']
+                self.task_id = list_set[0]
+                self.task_title = list_set[1]
+
+                msg_box = messagebox.askquestion(
+                    title="Apagar Tarefa", message=f"Deseja MESMO apagar a tarefa {self.task_title}?",
+                    icon='warning'
+                )
+
+                if msg_box == 'yes':
+                    cur = connection.cursor()
+                    command = f'DELETE FROM tasks WHERE id={self.task_id}'
+                    cur.execute(command)
+
+                    messagebox.showinfo(
+                        title="Apagar Tarefa",
+                        message=f"Tarefa {self.task_title} DELETADA com sucesso!"
+                    )
+                
+                self.readMANAGECRUD()
+
+            except IndexError:
+                messagebox.showerror(
+                    title="Erro",
+                    message="Selecione a tarefa na tabela!"
+                )
+
+        connection.commit()
+        self.readMANAGECRUD()
 
 class Manage(ManageCRUD):
     def autor(self):

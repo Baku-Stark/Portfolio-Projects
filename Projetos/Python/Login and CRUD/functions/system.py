@@ -107,8 +107,6 @@ class systemLOGIN(Manage):
                 except Exception as e:
                     print(e)
 
-        connection.close()
-
 class MainForm(systemLOGIN):
     def framesForm(self):
         self.frameCENTER = customtkinter.CTkFrame(self.root)

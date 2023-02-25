@@ -8,6 +8,8 @@
 
 <div align="center">
 
+<img src="img/login.png"/>
 
+<img src="img/crud.png"/>
 
 </div>
