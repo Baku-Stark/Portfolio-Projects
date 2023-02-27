@@ -56,7 +56,7 @@ class ManageGRAPH():
                 c_finalizado += 1
         count_tasks = [c_andamento, c_finalizado]
 
-        tasks_status = ["Em Andamento", "Finalizadas"]
+        tasks_status = ["Em Andamento", "Finalizada"]
         bar_labels = ['red', 'blue']
         bar_colors = ['tab:red', 'tab:blue']
 
@@ -150,7 +150,6 @@ class ManageCRUD(ManageGRAPH):
     
     def updateCRUD(self):
         connection = lite.connect(rf"database_content/{self.GlobalUser}.db")
-
         with connection:
             try:
                 list_data = self.listTreeView.focus()
@@ -162,13 +161,13 @@ class ManageCRUD(ManageGRAPH):
 
                 cur = connection.cursor()
 
-                if self.task_status[2] == "EM ANDAMENTO":
+                if self.task_status == "EM ANDAMENTO":
                     new_status = "FINALIZADA"
-                    command = f'UPDATE tasks SET status="{new_status}" WHERE id={self.task_id}'
+                    command = f"UPDATE tasks SET status='{new_status}' WHERE id={self.task_id}"
 
                 else:
                     new_status = "EM ANDAMENTO"
-                    command = f'UPDATE tasks SET status="{new_status}" WHERE id={self.task_id}'
+                    command = f"UPDATE tasks SET status='{new_status}' WHERE id={self.task_id}"
                 
                 cur.execute(command)
 
