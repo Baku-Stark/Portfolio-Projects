@@ -76,5 +76,7 @@ Player de Música | ❌
 <br>
 
 > ☕ Java
+
+Projetos | Conclusão Do Projeto
 --- | ---
 [Player de Música](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Java) | ❌
