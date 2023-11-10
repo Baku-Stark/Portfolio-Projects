@@ -72,3 +72,9 @@ Player de Música | ❌
 [Calculadora](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Calculadora) | ✔️
 [Jogo da Velha](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Jogo%20%20da%20Velha) | ✔️
 [Lista de Tarefas](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Lista%20De%20Tarefas) | ✔️
+
+<br>
+
+> ☕ Java
+--- | ---
+[Player de Música](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Java) | ❌
