@@ -124,27 +124,27 @@ class FooterCenter_Bot extends JPanel{
 		this.setOpaque(true);
 		
 		cicle.setBackground(new Color(17, 17, 17));
-		cicle.setIcon(new ImageIcon("src/Interface/buttons/ciclo_none.png"));
+		cicle.setIcon(new ImageIcon("src/Interface/images/buttons/ciclo_none.png"));
 		cicle.setOpaque(true);
 		this.add(cicle);
 		// =====
 		prev.setBackground(new Color(17, 17, 17));
-		prev.setIcon(new ImageIcon("src/Interface/buttons/prev.png"));
+		prev.setIcon(new ImageIcon("src/Interface/images/buttons/prev.png"));
 		prev.setOpaque(true);
 		this.add(prev);
 		// =====
 		play.setBackground(new Color(17, 17, 17));
-		play.setIcon(new ImageIcon("src/Interface/buttons/play.png"));
+		play.setIcon(new ImageIcon("src/Interface/images/buttons/play.png"));
 		play.setOpaque(true);
 		add(this.play);
 		// =====
 		next.setBackground(new Color(17, 17, 17));
-		next.setIcon(new ImageIcon("src/Interface/buttons/next.png"));
+		next.setIcon(new ImageIcon("src/Interface/images/buttons/next.png"));
 		next.setOpaque(true);
 		this.add(next);
 		// =====
 		shuffle.setBackground(new Color(17, 17, 17));
-		shuffle.setIcon(new ImageIcon("src/Interface/buttons/shuffle_none.png"));
+		shuffle.setIcon(new ImageIcon("src/Interface/images/buttons/shuffle_none.png"));
 		shuffle.setOpaque(true);
 		this.add(shuffle);
 	}
@@ -177,7 +177,7 @@ class FooterEast extends JPanel implements ChangeListener{
 
 	@Override
 	public void stateChanged(ChangeEvent e) {
-		// TODO Auto-generated method stub
+		// SET SONG VOLUME
 		if(e.getSource() == volume_slider) {
 			volume_text.setText("Volume: " + this.volume_slider.getValue());
 		}

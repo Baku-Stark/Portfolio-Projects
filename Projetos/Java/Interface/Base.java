@@ -9,7 +9,7 @@ public class Base extends JFrame{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	Image icon = Toolkit.getDefaultToolkit().getImage("src/Interface/buttons/icon.png");
+	Image icon = Toolkit.getDefaultToolkit().getImage("src/Interface/images/buttons/icon.png");
 	
 	public Base(){
 		this.setTitle("Project Music Player - Java");
