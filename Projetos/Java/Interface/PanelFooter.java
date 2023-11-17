@@ -1,8 +1,15 @@
 package Interface;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import javax.swing.event.*;
+import Functions.Song_Functions;
 
 public class PanelFooter extends JPanel{
 	private static final long serialVersionUID = 1L;
@@ -108,8 +115,12 @@ class FooterCenter_Top extends JPanel{
 	}
 }
 
-class FooterCenter_Bot extends JPanel{
+class FooterCenter_Bot extends JPanel implements ActionListener{
 	private static final long serialVersionUID = 1L;
+	
+	boolean Recording = true;
+	boolean Shuffle = false;
+	boolean Repeat = false;
 	
 	JButton cicle =  new JButton();
 	JButton shuffle = new JButton();
@@ -126,27 +137,102 @@ class FooterCenter_Bot extends JPanel{
 		cicle.setBackground(new Color(17, 17, 17));
 		cicle.setIcon(new ImageIcon("src/Interface/images/buttons/ciclo_none.png"));
 		cicle.setOpaque(true);
+		cicle.addActionListener(this);
 		this.add(cicle);
 		// =====
 		prev.setBackground(new Color(17, 17, 17));
 		prev.setIcon(new ImageIcon("src/Interface/images/buttons/prev.png"));
 		prev.setOpaque(true);
+		prev.addActionListener(this);
 		this.add(prev);
 		// =====
 		play.setBackground(new Color(17, 17, 17));
 		play.setIcon(new ImageIcon("src/Interface/images/buttons/play.png"));
 		play.setOpaque(true);
+		play.addActionListener(this);
 		add(this.play);
 		// =====
 		next.setBackground(new Color(17, 17, 17));
 		next.setIcon(new ImageIcon("src/Interface/images/buttons/next.png"));
 		next.setOpaque(true);
+		next.addActionListener(this);
 		this.add(next);
 		// =====
 		shuffle.setBackground(new Color(17, 17, 17));
 		shuffle.setIcon(new ImageIcon("src/Interface/images/buttons/shuffle_none.png"));
 		shuffle.setOpaque(true);
+		shuffle.addActionListener(this);
 		this.add(shuffle);
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// PLAY SONG
+		
+		if (e.getSource() == play){
+			if(Recording == true) {
+				// ==================== PLAY SONG
+				Recording = false;
+				play.setIcon(new ImageIcon("src/Interface/images/buttons/pause.png"));
+				//System.out.println("Playing: " + PanelBody.list.getSelectedValue());
+				try {
+					Song_Functions.Play_Song(PanelBody.list.getSelectedValue().toString(), true);
+				} catch (LineUnavailableException | UnsupportedAudioFileException | IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+			
+			else {
+				// ==================== PAUSE SONG
+				Recording = true;
+				play.setIcon(new ImageIcon("src/Interface/images/buttons/play.png"));
+				try {
+					Song_Functions.Play_Song(PanelBody.list.getSelectedValue().toString(), false);
+				} catch (LineUnavailableException | UnsupportedAudioFileException | IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		}
+		
+		else if(e.getSource() == prev) {
+			Song_Functions.Prev_Song();
+		}
+		
+		else if(e.getSource() == next) {
+			Song_Functions.Next_Song();
+		}
+		
+		else if(e.getSource() == cicle) {
+			if(Repeat == false) {
+				Repeat = true;
+				Song_Functions.Repeat_Song(Repeat);
+				cicle.setIcon(new ImageIcon("src/Interface/images/buttons/ciclo_actived.png"));
+				
+			}
+			
+			else {
+				Repeat = false;
+				Song_Functions.Repeat_Song(Repeat);
+				cicle.setIcon(new ImageIcon("src/Interface/images/buttons/ciclo_none.png"));
+			}
+		}
+		
+		else if(e.getSource() == shuffle) {
+			if(Shuffle == false) {
+				Shuffle = true;
+				Song_Functions.Shuffle_Song(Shuffle);
+				shuffle.setIcon(new ImageIcon("src/Interface/images/buttons/shuffle_actived.png"));
+				
+			}
+			
+			else {
+				Shuffle = false;
+				Song_Functions.Shuffle_Song(Shuffle);
+				shuffle.setIcon(new ImageIcon("src/Interface/images/buttons/shuffle_none.png"));
+			}
+		}
 	}
 }
 
