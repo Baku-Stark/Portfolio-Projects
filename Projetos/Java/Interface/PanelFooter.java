@@ -176,8 +176,10 @@ class FooterCenter_Bot extends JPanel implements ActionListener{
 				play.setIcon(new ImageIcon("src/Interface/images/buttons/pause.png"));
 				//System.out.println("Playing: " + PanelBody.list.getSelectedValue());
 				try {
-					Song_Functions.Play_Song(PanelBody.list.getSelectedValue().toString(), true);
-				} catch (LineUnavailableException | UnsupportedAudioFileException | IOException e1) {
+					Song_Functions.Play_Song(PanelBody.list.getSelectedValue().toString(), "play");
+				}
+				
+				catch (LineUnavailableException | UnsupportedAudioFileException | IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -188,8 +190,10 @@ class FooterCenter_Bot extends JPanel implements ActionListener{
 				Recording = true;
 				play.setIcon(new ImageIcon("src/Interface/images/buttons/play.png"));
 				try {
-					Song_Functions.Play_Song(PanelBody.list.getSelectedValue().toString(), false);
-				} catch (LineUnavailableException | UnsupportedAudioFileException | IOException e1) {
+					Song_Functions.Play_Song(PanelBody.list.getSelectedValue().toString(), "pause");
+				}
+				
+				catch (LineUnavailableException | UnsupportedAudioFileException | IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
