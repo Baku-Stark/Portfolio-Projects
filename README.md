@@ -4,6 +4,7 @@
 <div>
 <img align="center" alt="Baku-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
 <img align="center" alt="Baku-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+<img align="center" alt="Baku-Java" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
 </div>
 
 <br>
@@ -71,3 +72,11 @@ Player de Música | ❌
 [Calculadora](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Calculadora) | ✔️
 [Jogo da Velha](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Jogo%20%20da%20Velha) | ✔️
 [Lista de Tarefas](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/JavaScript/Lista%20De%20Tarefas) | ✔️
+
+<br>
+
+> ☕ Java
+
+Projetos | Conclusão Do Projeto
+--- | ---
+[Player de Música](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Java) | ❌
