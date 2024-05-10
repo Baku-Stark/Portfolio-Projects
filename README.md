@@ -79,4 +79,5 @@ Player de Música | ❌
 
 Projetos | Conclusão Do Projeto
 --- | ---
-[Player de Música](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Java) | ❌
+[Player de Música](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Java) | ✔️
+[Sistema de Conta Bancária](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Java/Conta%20Banc%C3%A1ria) | ✔️
