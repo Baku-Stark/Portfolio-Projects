@@ -23,6 +23,10 @@
 <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" />
 </div>
 
+<div>
+ <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+</div>
+
 <br>
 
 > DESCRIÇÃO
@@ -47,6 +51,8 @@ Projetos | Conclusão Do Projeto
 [Cronômetro](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Cron%C3%B4metro) | ✔️
 [Relógio](https://github.com/Baku-Stark/Portfolio-Baku/tree/main/Projetos/Python/Rel%C3%B3gio) | ✔️
 [Login](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Python/Login%20and%20CRUD) | ✔️
+[Python Química](https://github.com/Baku-Stark/Portfolio-Projects/blob/main/Projetos/Python/Qu%C3%ADmica/main.py) | ✔️
+[Processo Seletivo](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Python/Processo%20Seletivo) | ✔️
 
 <br>
 
@@ -79,9 +85,7 @@ Player de Música | ❌
 
 Projetos | Conclusão Do Projeto
 --- | ---
-[Player de Música](/Projetos/Java/Music%20Player/) | ✔️
 [Conta Bancária](/Projetos/Java/Conta%20Bancária/) | ✔️
 [Processo Seletivo](/Projetos/Java/Processo%20Seletivo/) | ✔️
-=======
 [Player de Música](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Java) | ✔️
 [Sistema de Conta Bancária](https://github.com/Baku-Stark/Portfolio-Projects/tree/main/Projetos/Java/Conta%20Banc%C3%A1ria) | ✔️
